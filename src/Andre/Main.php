@@ -56,8 +56,7 @@ class Main extends PluginBase implements Listener
 
 	public function onEnable() {
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
-		$this->getServer()->getScheduler()->scheduleRepeatingTask(new CallbackTask([$this,"gameTimber"]),20);
-		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML, array(
-		)); if($this->config->exists("lastpos"))
+                $this->config = (new Config($this->getDataFolder()."config.yml", Config::YAML))->getAll();
+                $this->saveDefaultConfig();
 	}
-	}
+}
