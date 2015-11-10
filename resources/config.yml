@@ -9,8 +9,8 @@
 # Arena's #
 ##
 arena1
-  Lobby-World: Lobby    // This will be where player's get teleported after they die / win match
-     Match-World: SG   // The world the plugin will use to teleport the player to the arena
+  Lobby-World: Lobby    // This will be where player's get teleported after they die / win match.
+     Match-World: SG   // The world the plugin will use to teleport the player to the arena.
 
 
 
