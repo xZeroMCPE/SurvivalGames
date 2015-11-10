@@ -3,9 +3,7 @@
 
 # Stat's
 
-- Basic Things 89%
-- Setup Message /join 0%
-- Automaticly chest refill 0%
+- Config 100%
+- Join Message 0%
 - Join Sign 0%
-- Timer 0%
-- DeatchMatch 0%
+- Arena / DeatchMatch 0%
