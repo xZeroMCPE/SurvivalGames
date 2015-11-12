@@ -72,7 +72,9 @@ class Main extends PluginBase implements Listener
             $sign = $sign->getText();
             if($sign[0]=='[SurvivalGame]'){
             $ArenaJoin == $this->getConfig()->get("ArenaJoin");
+            $ArenaJoined == $this->getConfig()->get("ArenaJoined");
             $event->getPlayer->sendMessage("$ArenaJoin");
+            $event->getPlayer->sendMessage("$ArenaJoined");
         
         }
         }
