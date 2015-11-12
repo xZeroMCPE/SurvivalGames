@@ -77,4 +77,20 @@ class Main extends PluginBase implements Listener
             $event->getPlayer->sendMessage("$ArenaJoined");
         
         }
-        }
+        public function onBlockPlace(BlockPlaceEvent $event){
+		$player = $event->getPlayer();
+	$world == $this->getConfig()->get("Arena");
+			if($player->hasPermission("survivalgame.edit")){
+				return true;
+			}elseif($player->getLevel()->getName() == $world){
+				$player->sendMessage("[Edit] Sorry, you can't break that here.");
+				$event->setCancelled();
+	}
+	public function onBlockBreak(BlockBreakEvent $event){
+		$player = $event->getPlayer();
+	$world == $this->getConfig()->get("Arena");
+			if($player->hasPermission("survivalgame.edit")){
+				return true;
+			}elseif($player->getLevel()->getName() == $world){
+				$player->sendMessage("[Edit] Sorry, you can't place that here.");
+				$event->setCancelled();
