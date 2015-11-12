@@ -1,12 +1,12 @@
 
 /*
-# SurvivalGames Made By: Andre_The_Gamer
+ SurvivalGames Made By: Andre_The_Gamer
 *\
 
 namespace Andre;
 
 /* 
-## THINGS PLUGIN WILL USE
+ THINGS PLUGIN WILL USE
 *\
 
 use pocketmine\plugin\PluginBase;
