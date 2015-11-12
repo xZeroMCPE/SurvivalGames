@@ -63,4 +63,16 @@ class Main extends PluginBase implements Listener
         $JoinMessage == $this->getConfig()->get("Player_Join_Server");
         $event->getPlayer->sendMessage("$PlayerJoinServer");
         }
+         public function playerBlockTouch(PlayerInteractEvent $event){   // Oak Log will be use as a join block when step on.
+        if($event->getBlock()->getID() == 68 || $event->getBlock()->getID() == 63 || $event->getBlock()->getID() == 17){
+            $sign = $event->getPlayer()->getLevel()->getTile($event->getBlock());
+            if(!($sign instanceof Sign)){
+                return;
+            }
+            $sign = $sign->getText();
+            if($sign[0]=='[SurvivalGame]'){
+            $ArenaJoin == $this->getConfig()->get("ArenaJoin");
+            $event->getPlayer->sendMessage("$ArenaJoin");
+        
+        }
         }
