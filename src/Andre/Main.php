@@ -59,4 +59,8 @@ class Main extends PluginBase implements Listener
                 $this->config = (new Config($this->getDataFolder()."config.yml", Config::YAML))->getAll();
                 $this->saveDefaultConfig();
 	}
-}
+        public function onJoin(PlayerJoinEvent $event){
+        $JoinMessage == $this->getConfig()->get("Player_Join_Server");
+        $event->getPlayer->sendMessage("$PlayerJoinServer");
+        }
+        }
