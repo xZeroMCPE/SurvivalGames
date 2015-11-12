@@ -4,14 +4,17 @@
 # Made By: Andre_The_Gamer
 #####
 
+########################
+# Message 
+########################
+Player_Join_Server: Welcome To My Server 
+ArenaJoin: Joinning SG Match.........
+Arenajoined: You have join SG-1
 
-##
+
+########################################################
 # Arena's #
-##
-
-Player_Join_Server: Welcome To My Server
-
-
+########################################################
 Lobby-World: Lobby    // This will be where player's get teleported after they die / win match.
 Match-World: SG   // The world the plugin will use to teleport the player to the arena.
 
