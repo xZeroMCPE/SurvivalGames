@@ -1,5 +1,9 @@
 # SurvivalGame
 
+# Permission
+  - survivalgame.place //Allow's player to place block in arena world
+  - survivalgame.break //Allow's player to break block in arena world
+
 
 # Stat's
 
