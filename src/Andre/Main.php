@@ -1,3 +1,4 @@
+<?php
 
 /*
  SurvivalGames Made By: Andre_The_Gamer
@@ -43,7 +44,7 @@ use killrate\Main as KillRate;
 use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\player\PlayerJoinEvent;
-#####
+
 
 class Main extends PluginBase implements Listener
 {	
