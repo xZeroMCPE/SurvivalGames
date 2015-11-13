@@ -26,7 +26,7 @@ Max-Player: 24 // Cannot be changed! 'YET"
 # Stand Where you wan't to set spawn and do /xyz and add the number's in config
 # Add The same line for more player's
 Spawns:
-- 12      // Edit the number's
+- 12      // Edit the number's //
 - 121
 - 121
 
