@@ -15,8 +15,8 @@ Arenajoined: You have join SG-1
 ########################################################
 # Arena's #
 ########################################################
-Lobby-World: Lobby    // This will be where player's get teleported after they die / win match.
-Match-World: SG   // The world the plugin will use to teleport the player to the arena.
+Lobby: Lobby    // This will be where player's get teleported after they die / win match.
+Arena: SG   // The world the plugin will use to teleport the player to the arena.
 
 Min-Player: 2 // Cannot be changed! 'YET"
 Max-Player: 24 // Cannot be changed! 'YET"
