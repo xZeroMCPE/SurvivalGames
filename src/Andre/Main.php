@@ -73,9 +73,13 @@ class Main extends PluginBase implements Listener
             $sign = $sign->getText();
             if($sign[0]=='[SurvivalGame]'){
             $ArenaJoin == $this->getConfig()->get("ArenaJoin");
-            $ArenaJoined == $this->getConfig()->get("ArenaJoined");
+            $Arena == $this->getConfig()->get("Arena");
             $event->getPlayer->sendMessage("$ArenaJoin");
             $event->getPlayer->sendMessage("$ArenaJoined");
+            $event->getPlayer->sendMessage(" -=-=-=-=-= ")
+            $event->getPlayer->sendMessage("You Have Joined: SG-1")
+            $event->getPlayer->sendMessage("Map: $Arena");
+            $event->getPlayer->sendMessage(" -=-=-=-=-= ");
         
         }
         public function onBlockPlace(BlockPlaceEvent $event){
@@ -95,3 +99,7 @@ class Main extends PluginBase implements Listener
 			}elseif($player->getLevel()->getName() == $world){
 				$player->sendMessage("[Edit] Sorry, you can't place that here.");
 				$event->setCancelled();
+	public function onDeath(PlayerDeathEvent $event){
+	 $event->getKiller->sendMessage("You Have Killed A Player")
+}
+}
