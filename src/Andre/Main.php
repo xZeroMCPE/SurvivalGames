@@ -1,13 +1,14 @@
+<?php
 
 /*
  SurvivalGames Made By: Andre_The_Gamer
-*\
+*/
 
 namespace Andre;
 
 /* 
  THINGS PLUGIN WILL USE
-*\
+*/
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
@@ -43,7 +44,7 @@ use killrate\Main as KillRate;
 use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\player\PlayerJoinEvent;
-#####
+
 
 class Main extends PluginBase implements Listener
 {	
