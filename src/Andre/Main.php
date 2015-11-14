@@ -94,8 +94,32 @@ class Main extends PluginBase implements Listener
 	        #### Player Death PopUp / ect
 	        $event->getKiller->sendPopup("You Killed: $PlayerDied");
 	        $event->getPlayer->sendPopup("You Have Been Killed By: $Killer");
+	        
+	}
+	        
 	 
-	        ####  == Arena Join Sign == ####
+        ####  == Arena Join Sign == ####
+	        
+	         public function playerBlockTouch(PlayerInteractEvent $event){   // Oak Log will be use as a join block when step on.
+        if($event->getBlock()->getID() == 68 || $event->getBlock()->getID() == 63 || $event->getBlock()->getID() == 17){
+            $sign = $event->getPlayer()->getLevel()->getTile($event->getBlock());
+            if(!($sign instanceof Sign)){
+                return;
+            }
+            $sign = $sign->getText();
+            if($sign[0]=='[SurvivalGame]'){
+            $ArenaJoin == $this->getConfig()->get("ArenaJoin");
+            $Arena == $this->getConfig()->get("Arena");
+            $event->getPlayer->sendMessage("$ArenaJoin");
+            $event->getPlayer->sendMessage("$ArenaJoined");
+            $event->getPlayer->sendMessage(" -=-=-=-=-= ")
+            $event->getPlayer->sendMessage("You Have Joined The Tournament.")
+            $event->getPlayer->sendMessage("Using Map: $Arena");
+            $event->getPlayer->sendMessage(" -=-=-=-=-= ");
+            
+            ## Timer Popup / Declare.
+             // STILL HAVE ALOT TO DO :D // Don't Worry. I'll Finishe As Soon As Possible.
+            $event->getPlayer->sendPopup("Starting In: $Timer"); // $Timer hasn't been set it
 	        
 }
 }
