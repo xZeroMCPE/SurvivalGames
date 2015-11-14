@@ -120,6 +120,13 @@ class Main extends PluginBase implements Listener
             ## Timer Popup / Declare.
              // STILL HAVE ALOT TO DO :D // Don't Worry. I'll Finishe As Soon As Possible.
             $event->getPlayer->sendPopup("Starting In: $Timer"); // $Timer hasn't been set it
-	        
+	   
+            }
+             public function getNextSpawn(){
+        $this->spawns++;
+        $x = $this->Config->get('Pod_Spawn')[$this->spawns][0];
+        $y = $this->prefs->get('Pod_Spawn')[$this->spawns][1];
+        $z = $this->prefs->get('Pod_Spawn')[$this->spawns][2];
+        return (new Vector3($x, $y, $z));
 }
 }
