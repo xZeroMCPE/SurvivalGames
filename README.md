@@ -10,5 +10,6 @@
 
 - Config / Basic Things 100%
 - Join Message 100%
-- Join Sign 0%
+- Arena Message 95%
+- Join Sign 50%
 - Arena / DeatchMatch 0%
