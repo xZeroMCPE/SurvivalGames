@@ -2,3 +2,4 @@ name: SurvivalGames
 version: 1.0.0
 api: 1.0.0
 main: Andre\Main
+description: SurvivalGame Plugin For PocketMine
