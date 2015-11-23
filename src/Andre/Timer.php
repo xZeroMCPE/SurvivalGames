@@ -12,9 +12,8 @@ class Timer extends PluginTask{
   }
 
   public function onRun($tick){
-    //do something (this will be executed every second)
-    //you can execute a *public* function in your main class using:
-    //$this->plugin->someFuntction();
+  
+  
   }
 
 }
