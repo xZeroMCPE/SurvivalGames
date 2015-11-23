@@ -8,15 +8,16 @@ class Timer extends PluginTask{
 
   public function __construct($plugin){
     $this->plugin = $plugin;
-    parent::__construct($plugin);
-  }
+    parent::__construct($plugin);  }
 
   public function onRun($tick){
     
     if ($tick = 0) {
-$this->getServer()->broadcastMessage("- Match will start in 1:150 Min !");
-} else {
-return false;
+    $this->getServer()->broadcastMessage("- Go Go, The match has started ! ");
+     } else {
+    return false;
+    // More will be added for 2 min :P 
+  
   }
 
 }
