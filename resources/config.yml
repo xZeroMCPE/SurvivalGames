@@ -29,6 +29,8 @@ ArenaFullMessage: Tournament Is Full, Join Later
 ########################################################
 # Arena's #
 ########################################################
+ArenaMap:
+LobbyMap:
 endTime: 180
 gameTime: 300
 waitTime: 180
