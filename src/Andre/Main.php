@@ -699,19 +699,24 @@ class Main extends PluginBase implements Listener
 			switch($this->gameStatus)
 			{
 			case 0:
-				$sign->setText(TextFormat::GREEN. "[ Join ]","§dBreeze Island","§e§lSG-1");
+				$ArenaMap == $this->getConfig->get("ArenaMap");
+				$sign->setText(TextFormat::GREEN. "[SurvivalGame]","§d$ArenaMap","§e§lSG-1");
 				break;
 			case 1:
-				$sign->setText(TextFormat::GREEN. "[ Join ]","§dBreeze Island","§e§lSG-1");
+				$ArenaMap == $this->getConfig->get("ArenaMap");
+				$sign->setText(TextFormat::GREEN. "[SurvivalGame]","§d$ArenaMap","§e§lSG-1");
 				break;
 			case 2:
-				$sign->setText(TextFormat::YELLOW. "[ Running ]","Breeze Island","SG-1");
+				$ArenaMap == $this->getConfig->get("ArenaMap");
+				$sign->setText(TextFormat::YELLOW. "[ Running ]","§d$ArenaMap","SG-1");
 				break;
 			case 3:
-				$sign->setText(TextFormat::YELLOW. "[ Running ]","Breeze Island","SG-1");
+				$ArenaMap == $this->getConfig->get("ArenaMap");
+				$sign->setText(TextFormat::YELLOW. "[ Running ]","§d$ArenaMap","SG-1");
 				break;
 			case 4:
-				$sign->setText(TextFormat::RED. "[ DM ]","Breeze Island","SG-1");
+				$ArenaMap == $this->getConfig->get("ArenaMap");
+				$sign->setText(TextFormat::RED. "[ DM ]","§d$ArenaMap","SG-1");
 				break;
 			}
 		}
@@ -729,7 +734,7 @@ class Main extends PluginBase implements Listener
 			case 0:
 				if($event->getBlock()->getID() != 63 && $event->getBlock()->getID() != 68)
 				{
-					$player->sendMessage(TextFormat::GREEN."[SurvivalGame] please choose a sign to click on");
+					$player->sendMessage(TextFormat::GREEN."[SurvivalGame] Tap sign to set join sign");
 					return;
 				}
 				$this->sign=array(
@@ -740,7 +745,7 @@ class Main extends PluginBase implements Listener
 				$this->config->set("sign",$this->sign);
 				$this->config->save();
 				$this->SetStatus[$username]++;
-				$player->sendMessage(TextFormat::GREEN."Sign for condition has been created.");
+				$player->sendMessage(TextFormat::GREEN."Sign Join has been created");
 				$player->sendMessage(TextFormat::GREEN."Please click on the 1st spawnpoint.");
 				$this->signlevel=$this->getServer()->getLevelByName($this->config->get("sign")["level"]);
 				$this->sign=new Vector3($this->sign["x"],$this->sign["y"],$this->sign["z"]);
@@ -1042,7 +1047,7 @@ class Main extends PluginBase implements Listener
 				$this->config->save();
 				$this->SetStatus[$username]++;
 				$player->sendMessage(TextFormat::GREEN."Spawnpoint 23 created!");
-				$player->sendMessage(TextFormat::GREEN."Please click on the 24th spawnpoint.");				
+				$player->sendMessage(TextFormat::GREEN."Please click on the DeathMatch spawmpoint!");				
 				$this->pos23=new Vector3($this->pos23["x"]+0.5,$this->pos23["y"],$this->pos23["z"]+0.5);
 				break;
 			case 24:
