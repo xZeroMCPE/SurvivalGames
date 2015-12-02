@@ -118,9 +118,9 @@ class Main extends PluginBase implements Listener
             }
              public function getNextSpawn(){
         $this->spawns++;
-        $x = $this->Config->get('Pod_Spawn')[$this->spawns][0];
-        $y = $this->prefs->get('Pod_Spawn')[$this->spawns][1];
-        $z = $this->prefs->get('Pod_Spawn')[$this->spawns][2];
+        $x = $this->Config()->get('Pod_Spawn')[$this->spawns][0];
+        $y = $this->Config()->get('Pod_Spawn')[$this->spawns][1];
+        $z = $this->Config()->get('Pod_Spawn')[$this->spawns][2];
         return (new Vector3($x, $y, $z));
 }
 }
