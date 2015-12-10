@@ -51,7 +51,6 @@ class Main extends PluginBase implements Listener
 	}
 	public function onEnable() {
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
-		 $this->getServer()->getScheduler()->scheduleRepeatingTask(new Timer($this), 1200); //timer run every 20 ticks (1 second)
                 $this->config = (new Config($this->getDataFolder()."config.yml", Config::YAML))->getAll();
                 $this->saveDefaultConfig();
 	}
@@ -68,30 +67,7 @@ class Main extends PluginBase implements Listener
 			}elseif($player->getLevel()->getName() == $world){
 				$player->sendMessage("[Edit] Sorry, you can't break that here.");
 				$event->setCancelled();
-	}
-	public function onBlockBreak(BlockBreakEvent $event){
-		$player = $event->getPlayer();
-	$world == $this->getConfig()->get("Arena");
-			if($player->hasPermission("survivalgame.edit")){
-				return true;
-			}elseif($player->getLevel()->getName() == $world){
-				$player->sendMessage("[Edit] Sorry, you can't place that here.");
-				$event->setCancelled();
-	public function onDeath(PlayerDeathEvent $event){
-		$PlayerDied == $event->getPlayer()->getName();
-		$Killer == $event->getKiller()->getName();
-		
-		#### Player Death Message / etc
-		$event->getPlayer->sendMessage("You Have Been Killed By: $Killer");
-	        $event->getKiller->sendMessage("You Killed: $PlayerDied");
-	        
-	        #### Player Death PopUp / ect
-	        $event->getKiller->sendPopup("You Killed: $PlayerDied");
-	        $event->getPlayer->sendPopup("You Have Been Killed By: $Killer");
-	        
-	}
-	        
-	 
+	}	public function onBlockBreak(BlockBreakEvent $event){
         ####  == Arena Join Sign == ####
 	        
 	         public function playerBlockTouch(PlayerInteractEvent $event){   // Oak Log will be use as a join block when step on.
