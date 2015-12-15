@@ -1,5 +1,6 @@
 # SurvivalGame
-# [Download - Click Here!](https://github.com/AndreTheGamer/SurvivalGame/releases/download/untagged-f052324f27aeb463b2a3/SurvivalGame_v1.0.0.phar)
+# [Download - Look Below!](#)
+ https://github.com/AndreTheGamer/SurvivalGame/releases/download/untagged-f052324f27aeb463b2a3/SurvivalGame_v1.0.0.phar
  - Download the lastest release above.
  - Help us find bugs, download /create pull request.
  - This is the first release so expect bugs/issues.
