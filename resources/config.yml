@@ -18,28 +18,55 @@
 
 
 ########################
-# Message 
+# Main Settings 
 ########################
-Player_Join_Server: Welcome To My Server 
-ArenaJoin: Joinning SG Match..........
-Arenajoined: You have join SG-1
-ArenaFullMessage: Tournament Is Full, Join Later
+# 60 Sec = 1 Minute
+
+Game-Time: 180
+Wait-Time: 300
+End-Time: 180
 
 
-########################################################
-# Arena's #
-########################################################
-Lobby: Lobby    // This will be where player's get teleported after they die / win match.
-Arena: SG   // The world the plugin will use to teleport the player to the arena.
+########################
+# Prefix Related
+########################
 
-Min-Player: 2 // Cannot be changed! 'YET"
-Max-Player: 24 // Cannot be changed! 'YET"
+Chat-Prefix: [SG]
+Main-Color: blue
+Arena-Map: ChangeME
+
+########################
+# Chat Related
+########################
+
+Allowed Commands:
+- /hi
+- /me
+- /help
+Blocked Commands:
+- /kill
+- /kill all
+- /tp
+Blocked Words:
+- Fuck
+- Bitch
+- Whore
+- Gay
+
+########################
+# Chat Related
+########################
+
+In-Match: Oops, please leave server to quit the match.
+Match-Full: This arena is full.
+Match-Started: This arena is in progress.
+Arena-Join: Welcome! , Tournament will start soon.
+No-Permission: You don't have permission to break/place that.
+New-Arena-Open: New Arena Has Been Opened.
 
 
-# Stand Where you wan't to set spawn and do /xyz and add the number's in config
-# Add The same line for more player's
-Pos_Spawn:
-- - 1      // X
-  - 2     //  Y   Add The 3 Line, For each player spawn.
-  - 3     //  Z
----
+
+
+
+
+...
