@@ -31,6 +31,6 @@ permissions:
      SurvivalGame.command.sg:
       description: set SurvivalGame
       default: op
-   SurvivalGame.touch.startgame:
+   sg.touch.startgame:
     description: click the sign and join the game
     default: true
