@@ -690,7 +690,6 @@ class Main extends PluginBase implements Listener
 		{
 			return;
 		}
-		$Arena-Map == $this->getConfig()->get("Arena-Map");
 		$sign=$this->signlevel->getTile($this->sign);
 		if($sign instanceof Sign)
 		{
@@ -949,9 +948,10 @@ class Main extends PluginBase implements Listener
 				$this->config->save();
 				$this->SetStatus[$username]++;
 				$player->sendMessage(TextFormat::GREEN."Spawnpoint 16 created!");
-				$player->sendMessage(TextFormat::GREEN."Please click on the 17th spawnpoint.");				
+				$player->sendMessage(TextFormat::GREEN."Please click on the DeadMatch spawnpoint.");				
 				$this->pos16=new Vector3($this->pos16["x"]+0.5,$this->pos16["y"],$this->pos16["z"]+0.5);
-			case lastpos:
+				break;
+			case 17:
 			$this->lastpos=array(
 					"x" =>$block->x,
 					"y" =>$block->y,
