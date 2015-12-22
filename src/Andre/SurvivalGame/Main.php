@@ -951,7 +951,6 @@ class Main extends PluginBase implements Listener
 				$player->sendMessage(TextFormat::GREEN."Spawnpoint 16 created!");
 				$player->sendMessage(TextFormat::GREEN."Please click on the 17th spawnpoint.");				
 				$this->pos16=new Vector3($this->pos16["x"]+0.5,$this->pos16["y"],$this->pos16["z"]+0.5);
-				break;
 			case lastpos:
 			$this->lastpos=array(
 					"x" =>$block->x,
