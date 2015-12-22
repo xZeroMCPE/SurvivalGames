@@ -690,7 +690,7 @@ class Main extends PluginBase implements Listener
 		{
 			return;
 		}
-		$Arena == $this->getConfig()->get("Arena-Map");
+		$Arena = $this->getConfig()->get("Arena-Map");
 		$sign=$this->signlevel->getTile($this->sign);
 		if($sign instanceof Sign)
 		{
