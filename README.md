@@ -7,9 +7,11 @@
  
 # How To Setup
 
-- Download and add the plugin
-- Use command /sg set
-- Then folow on screen guide :) 
+- Make sure you have Economy Installed or PocketMoney. 
+- Download the plugin above
+- add plugin to server
+- start server use command /sg set
+- follow on screen guide:)
 
 
 +
