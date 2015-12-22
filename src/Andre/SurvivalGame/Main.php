@@ -1,5 +1,5 @@
 <?php
-namespace Andre\SurvivalGame;
+namespace Andre\SurvivalGame; ##
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
