@@ -1,12 +1,18 @@
 # SurvivalGame
 # [Download - Look Below!](#)
  https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.0.1/SurvivalGame_v1.0.1.phar
- - Download the lastest release above.
- - Help us find bugs, download /create pull request.
- - This is the first release so expect bugs/issues.
-![alt tag](http://dev.bukkit.org/media/images/76/471/Bukkit-Line0001.png)
- How To Setup
+ 
+ - Download the lastest release above
+ - Help us by reporting known bugs/or pul request.
+ 
+# How To Setup
 
+- Download and add the plugin
+- Use command /sg set
+- Then folow on screen guide :) 
+
+
++
 Due to school updates might get delay. But anyway that won't stop
 me from updating /finishing the plugin. I will try to work as fast
 to finishe it. You can also contribute by creating a pull request,
