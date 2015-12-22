@@ -1,5 +1,5 @@
 # SurvivalGame
-# [Download - Look Below!](#)
+# [Download - Belwo](#)
  https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.0.1/SurvivalGame_v1.0.1.phar
  
  - Download the lastest release above
@@ -17,5 +17,5 @@ You guys can go head and download this. It is working i've myself have tested th
 still bugs to be found :P just help us by looking /telling us through through the issue page.
 Also, due to school updated might also get delay.
 
-For now i'm on christmas Break. So i will work in full to finishe/fix bugs on this plugin.
-=[--------]=
+For now i'm on christmas Break. So i will work in full to finishe/fix bugs on this plugin. Thanks
+-[=[--------]=]-
