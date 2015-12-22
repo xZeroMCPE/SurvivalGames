@@ -52,8 +52,8 @@ class Main extends PluginBase implements Listener
 		$this->getServer()->getScheduler()->scheduleRepeatingTask(new CallbackTask([$this,"gameTimber"]),20);
 		@mkdir($this->getDataFolder() . "data/");
 		$this->points = new Config($this->getDataFolder()."points.yml", Config::YAML);
-		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML, array(
-		)); if($this->config->exists("lastpos"))
+		$this->config=new Config($this->getDataFolder() . "config.yml", Config::YAML, array());
+		if($this->config->exists("lastpos"))
 		{
 			$this->sign=$this->config->get("sign");
 			$this->pos1=$this->config->get("pos1");
