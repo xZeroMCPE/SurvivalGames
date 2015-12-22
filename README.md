@@ -1,5 +1,5 @@
 # SurvivalGame
-# [Download - Belwo](#)
+# [Download - Below](#)
  https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.0.1/SurvivalGame_v1.0.1.phar
  
  - Download the lastest release above
