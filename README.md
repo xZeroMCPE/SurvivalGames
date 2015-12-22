@@ -4,7 +4,7 @@
  
  - Download the lastest release above
  - Help us by reporting known bugs/or pul request.
- 
+ - 
 # How To Setup
 
 - Make sure you have Economy Installed or PocketMoney. 
@@ -25,3 +25,5 @@ For now i'm on christmas Break. So i will work in full to finishe/fix bugs on th
 
 Want to be an contributor? Go head and create a issue about it. And we"ll add you :) 
 YoU MUST have a very good /codding style :) 
+
+# You Must Have Economy Installed!
