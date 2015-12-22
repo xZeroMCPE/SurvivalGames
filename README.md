@@ -13,8 +13,9 @@
 
 
 +
-Due to school updates might get delay. But anyway that won't stop
-me from updating /finishing the plugin. I will try to work as fast
-to finishe it. You can also contribute by creating a pull request,
-or by downloading the lastest version above and helping me find
-bugs. Thanks
+You guys can go head and download this. It is working i've myself have tested this but there are
+still bugs to be found :P just help us by looking /telling us through through the issue page.
+Also, due to school updated might also get delay.
+
+For now i'm on christmas Break. So i will work in full to finishe/fix bugs on this plugin.
+=[--------]=
