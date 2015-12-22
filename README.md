@@ -19,3 +19,7 @@ Also, due to school updated might also get delay.
 
 For now i'm on christmas Break. So i will work in full to finishe/fix bugs on this plugin. Thanks
 -[=[--------]=]-
+
+
+Want to be an contributor? Go head and create a issue about it. And we"ll add you :) 
+YoU MUST have a very good /codding style :) 
