@@ -1,5 +1,36 @@
-name: SurvivalGames
-version: 1.0.0
+name: SurvivalGame
 api: 1.0.0
-main: Andre\Main
-description: SurvivalGame Plugin For PocketMine
+version: 1.0.0
+main: Andre\SurvivalGame\Main
+load: POSTWORLD
+author: AndreTheGamer
+website: www.github.com/andrethegamer/survivalgame
+
+
+commands:
+ sg:
+  permission: survivalgame.command.sg
+  description: SurvivalGame Main Command
+  usage: /sg <set|remove>
+ lobby:
+  permission: SurvivalGame.command.lobby
+  description: back to lobby
+  usage: /lobby
+permissions:
+ SurvivalGame.*:
+  description: the main permission
+  default: op
+  children:
+   SurvivalGame.command.*:
+    description: use commands in plugin
+    default: op
+    children:
+     SurvivalGame.command.lobby:
+      description: back to lobby
+      default: true
+     SurvivalGame.command.sg:
+      description: set SurvivalGame
+      default: op
+   SurvivalGame.touch.startgame:
+    description: click the sign and join the game
+    default: true
