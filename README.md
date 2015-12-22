@@ -1,17 +1,11 @@
 # SurvivalGame
 # [Download - Look Below!](#)
- https://github.com/AndreTheGamer/SurvivalGame/releases/download/untagged-f052324f27aeb463b2a3/SurvivalGame_v1.0.0.phar
+ https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.0.1/SurvivalGame_v1.0.1.phar
  - Download the lastest release above.
  - Help us find bugs, download /create pull request.
  - This is the first release so expect bugs/issues.
-
-# Stat
-
-- Config / Basic Things 100%
-- Join Message 100%
-- Arena Message 95%
-- Join Sign 50%
-- Arena / DeatchMatch 0%
+![alt tag](http://dev.bukkit.org/media/images/76/471/Bukkit-Line0001.png)
+ How To Setup
 
 Due to school updates might get delay. But anyway that won't stop
 me from updating /finishing the plugin. I will try to work as fast
