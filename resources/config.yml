@@ -22,9 +22,9 @@
 ########################
 # 60 Sec = 1 Minute
 
-Game-Time: 180
-Wait-Time: 300
-End-Time: 180
+gameTime: 180
+waitTime: 300
+endTime: 180
 
 
 ########################
