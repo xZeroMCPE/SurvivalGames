@@ -452,6 +452,15 @@ class Main extends PluginBase implements Listener
 		unset($pl,$msg);
 	}
 	
+	public function sendTip($msg){
+		foreach($this->players as $pl)
+		{
+			$this->getServer()->getPlayer($pl["id"])->sendTip($msg);
+		}
+		$this->getServer()->getLogger()->info($msg);
+		unset($pl,$msg);
+	}	
+	
 	public function gameTimber(){
 		if(!isset($this->lastpos) || $this->lastpos==array())
 		{
