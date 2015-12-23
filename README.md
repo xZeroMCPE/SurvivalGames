@@ -5,7 +5,7 @@
 https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.0.3/SurvivalGame_v1.0.3.phar
  - Download the lastest release above
  - Help us by reporting known bugs/or pul request.
- - 
+
 # Next Update
  - Chat Filter
  - Better Sign design
