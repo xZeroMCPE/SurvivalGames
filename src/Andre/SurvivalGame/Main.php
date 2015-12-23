@@ -698,26 +698,26 @@ class Main extends PluginBase implements Listener
 		{
 			return;
 		}
-		$Arena-Map == $this->getConfig()->get("Arena-Map");
+		$Arena = $this->getConfig()->get("Arena-Map");
 		$sign=$this->signlevel->getTile($this->sign);
 		if($sign instanceof Sign)
 		{
 			switch($this->gameStatus)
 			{
 			case 0:
-				$sign->setText(TextFormat::GREEN. "[ Join ]","§d$Arena-Map","§e§lSG-1");
+				$sign->setText("§7[§aJoin§7] §b:§9".count($this->players)."§9/24","§b$Arena","§eSG 1");
 				break;
 			case 1:
-				$sign->setText(TextFormat::GREEN. "[ Join ]","§d$Arena-Map","§e§lSG-1");
+				$sign->setText("§7[§aJoin§7] §b:§9".count($this->players)."§9/24","§b$Arena","§eSG 1");
 				break;
 			case 2:
-				$sign->setText(TextFormat::YELLOW. "[ Running ]","$Arena-Map","SG-1");
+				$sign->setText("§7[§5Running§7] §b:§9".count($this->players)."§9/24","§b$Arena","§eSG 1");
 				break;
 			case 3:
-				$sign->setText(TextFormat::YELLOW. "[ Running ]","$Arena-Map","SG-1");
+				$sign->setText("§7[§5Running§7] §b:§9".count($this->players)."§9/24","§b$Arena","§eSG 1");
 				break;
 			case 4:
-				$sign->setText(TextFormat::RED. "[ DM ]","$Arena-Map","SG-1");
+				$sign->setText("§7[§cDM§7] §b:§9".count($this->players)."§9/16","§b$Arena","§eSG 1");
 				break;
 			}
 		}
