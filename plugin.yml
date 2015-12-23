@@ -3,8 +3,8 @@ api: 1.0.0
 version: 1.0.1
 main: Andre\SurvivalGame\Main
 load: POSTWORLD
-author: AndreTheGamer
-website: www.github.com/andrethegamer/survivalgame
+author: AndreTheGamer & Driesboy
+website: https://github.com/andrethegamer/survivalgame or https://github.com/Driesboy/SurvivalGame
 
 
 commands:
