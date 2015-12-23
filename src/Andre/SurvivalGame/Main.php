@@ -496,11 +496,19 @@ class Main extends PluginBase implements Listener
 			switch($this->lastTime)
 			{
 			case 1:
+				$this->sendTip("§6start in §b".$this->lastTime." seconds");
+				break;
 			case 2:
+				$this->sendTip("§6start in §b".$this->lastTime." seconds");
+				break;
 			case 3:
+				$this->sendTip("§6start in §b".$this->lastTime." seconds");
+				break;
 			case 4:
+				$this->sendTip("§6start in §b".$this->lastTime." seconds");
+				break;
 			case 5:
-				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Starting in ".$this->lastTime.".");
+				$this->sendTip("§6start in §b".$this->lastTime." seconds");
 				break;	
 			case 10:
 				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] The tournament start in 0:10.");
