@@ -1,14 +1,18 @@
 # SurvivalGame
+[![Join the chat at https://gitter.im/AndreTheGamer/SurvivalGame](https://badges.gitter.im/AndreTheGamer/SurvivalGame.svg)](https://gitter.im/AndreTheGamer/SurvivalGame?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 # [Download - Below](#)
 https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.0.3/SurvivalGame_v1.0.3.phar
-
-[![Join the chat at https://gitter.im/AndreTheGamer/SurvivalGame](https://badges.gitter.im/AndreTheGamer/SurvivalGame.svg)](https://gitter.im/AndreTheGamer/SurvivalGame?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
- 
  - Download the lastest release above
  - Help us by reporting known bugs/or pul request.
  - 
+# Next Update
+ - Chat Filter
+ - Better Sign design
+ - This list will get updated as soon we've done
+ with the following first two.
+ 
 # How To Setup
-
 - Make sure you have Economy Installed or PocketMoney. 
 - Download the plugin above
 - add plugin to server
