@@ -1,6 +1,6 @@
 # SurvivalGame
 # [Download - Below](#)
-https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.0.2/SurvivalGame_v1.0.1.phar
+https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.0.3/SurvivalGame_v1.0.3.phar
 
 [![Join the chat at https://gitter.im/AndreTheGamer/SurvivalGame](https://badges.gitter.im/AndreTheGamer/SurvivalGame.svg)](https://gitter.im/AndreTheGamer/SurvivalGame?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
  
