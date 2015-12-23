@@ -443,7 +443,7 @@ class Main extends PluginBase implements Listener
 				$i++;
 				$p=$this->getServer()->getPlayer($val["id"]);
 				//echo($i."\n");
-				$p->setLevel($this->level);                                 $p2->setPos; # This shoud fix the level teleporting issue.
+				$p->setLevel($this->level);
 				eval("\$p->teleport(\$this->pos".$i.");");
 				unset($p);
 			}
