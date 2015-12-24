@@ -50,6 +50,7 @@ class Main extends PluginBase implements Listener
 		$this->api = EconomyAPI::getInstance();
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
 		$this->getServer()->getScheduler()->scheduleRepeatingTask(new CallbackTask([$this,"gameTimber"]),20);
+		@mkdir($this->getDataFolder(), 0777, true);
 		$this->points = new Config($this->getDataFolder()."points.yml", Config::YAML);
 		$this->config=new Config($this->getDataFolder() . "config.yml", Config::YAML, array());
 		if($this->config->exists("lastpos"))
