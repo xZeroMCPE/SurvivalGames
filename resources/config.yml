@@ -1,30 +1,10 @@
 ---
-##########################################################################################################
-#       _____ __ __  ____  __ __  ____  __ __   ____  _           ____   ____  ___ ___    ___  ____      #
-#      / ___/|  |  ||    \|  |  ||    ||  |  | /    || |         /    | /    ||   |   |  /  _]/ ___/     #
-#     (   \_ |  |  ||  D  )  |  | |  | |  |  ||  o  || |        |   __||  o  || _   _ | /  [_(   \_      #
-#      \__  ||  |  ||    /|  |  | |  | |  |  ||     || |___     |  |  ||     ||  \_/  ||    _]\__  |     #
-#      /  \ ||  :  ||    \|  :  | |  | |  :  ||  _  ||     |    |  |_ ||  _  ||   |   ||   [_ /  \ |     #
-#      \    ||     ||  .  \\   /  |  |  \   / |  |  ||     |    |     ||  |  ||   |   ||     |\    |     #
-#       \___| \__,_||__|\_| \_/  |____|  \_/  |__|__||_____|    |___,_||__|__||___|___||_____| \___|     #
-#                                                                                                        #
-#                Hi, thanks for downloading "SurvivalGame" plugin for pocketmine,                        #
-#                                                                                                        #
-#          This plugin is being made, So therefore new bugs /features are being added                    #
-#                   Below are some configuration file for this plugin                                    #
-##########################################################################################################
+#######################################
+# SURVIVIVALGAME, 
+# 
+# GitHub: wwww.github.com/andrethegamer/survivalgame
+########################################
 
-
-
-
-########################
-# Main Settings 
-########################
-# 60 Sec = 1 Minute
-
-gameTime: 180
-waitTime: 300
-endTime: 180
 
 
 ########################
@@ -54,19 +34,12 @@ Blocked Words:
 - Gay
 
 ########################
-# Chat Related
+# Main Settings 
 ########################
+# 60 Sec = 1 Minute
 
-In-Match: Oops, please leave server to quit the match.
-Match-Full: This arena is full.
-Match-Started: This arena is in progress.
-Arena-Join: Welcome! , Tournament will start soon.
-No-Permission: You don't have permission to break/place that.
-New-Arena-Open: New Arena Has Been Opened.
-
-
-
-
-
+gameTime: 180
+waitTime: 300
+endTime: 180
 
 ...
