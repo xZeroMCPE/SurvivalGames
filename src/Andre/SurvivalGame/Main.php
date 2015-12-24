@@ -204,14 +204,22 @@ class Main extends PluginBase implements Listener
 		                $deaths = $this->points->get($player)[0];
 				$kills = $this->points->get($player)[1];
 				$points = $this->points->get($player)[2];
-				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] You have " .$deaths. " deaths and " .$kills. " kills. ");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §l§f--[[§e---+++---§r§f]]--");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §bYou're stats");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §lDeaths: §9$deaths");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §lKills: §9$kills");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §l§f--[[§e---+++---§r§f]]--");
 				return true;
                         }else{
                                 $player = $args[1];
 				$deaths = $this->points->get($player)[0];
 				$kills = $this->points->get($player)[1];
 				$points = $this->points->get($player)[2];
-				$sender->sendMessage(TextFormat::RED . "[{$this->getConfig()->get("prefix")}]" .$player. " has " .$deaths. " deaths and " .$kills. " kills. ");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §l§f--[[§e---+++---§r§f]]--");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §bPlayer: §9$player Stats");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §lDeaths: §9$deaths");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §lKills: §9$kills");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §l§f--[[§e---+++---§r§f]]--");
 				return true;
                                 }
                         }else{
