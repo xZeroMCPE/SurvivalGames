@@ -50,7 +50,6 @@ class Main extends PluginBase implements Listener
 		$this->api = EconomyAPI::getInstance();
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
 		$this->getServer()->getScheduler()->scheduleRepeatingTask(new CallbackTask([$this,"gameTimber"]),20);
-		@mkdir($this->getDataFolder(), 0777, true);
 		$this->points = new Config($this->getDataFolder()."points.yml", Config::YAML);
 		$this->config=new Config($this->getDataFolder() . "config.yml", Config::YAML, array());
 		if($this->config->exists("lastpos"))
@@ -132,7 +131,7 @@ class Main extends PluginBase implements Listener
 											 $this->money->getDescription()->getVersion());
 											 }
 		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] SurvivalGame Has Been Enable");
-		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] By: Driesboy");
+		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] By: AndreTheGamer");
 		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] File: Config Loaded !");
 		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] File: Point Loaded !");
 	
