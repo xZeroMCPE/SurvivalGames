@@ -205,7 +205,7 @@ class Main extends PluginBase implements Listener
 				$kills = $this->points->get($player)[1];
 				$points = $this->points->get($player)[2];
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §l§f--[[§e---+++---§r§f]]--");
-				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §bYou're stats");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §bYour stats");
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §lDeaths: §9$deaths");
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §lKills: §9$kills");
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §l§f--[[§e---+++---§r§f]]--");
@@ -223,7 +223,7 @@ class Main extends PluginBase implements Listener
 				return true;
                                 }
                         }else{
-                                $sender->sendMessage("You dont have permissions to run this command.");
+                                $sender->sendMessage("You don't have permissions to run this command.");
 				return true; }
 				break; 
 		case "set":
@@ -539,7 +539,7 @@ class Main extends PluginBase implements Listener
                                 $Arena == $this->getConfig()->get("Arena-Map");
 				$this->gameStatus=2;
 				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "====================");
-				Server::getInstance()->broadcastMessage(TextFormat::RED. "The tournament has begin");
+				Server::getInstance()->broadcastMessage(TextFormat::RED. "The tournament has begun");
 				Server::getInstance()->broadcastMessage(TextFormat::RED. "Using Map: $Arena");
 				Server::getInstance()->broadcastMessage(TextFormat::YELLOW. "Have Fun!");
 				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "====================");
