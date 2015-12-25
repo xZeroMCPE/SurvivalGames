@@ -37,6 +37,7 @@ Blocked Words:
 # Main Settings 
 ########################
 # 60 Sec = 1 Minute
+# Time format: seconds
 
 gameTime: 180
 waitTime: 300
