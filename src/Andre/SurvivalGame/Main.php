@@ -1236,8 +1236,8 @@ class Main extends PluginBase implements Listener
 	}
 	
 	public function onDisable(){
-		$this->config->save();
-        	$this->points->save();
+		$this->saveResource("config.yml")
+        	$this->saveResource("points.yml")
 			$this->getServer()->getLogger()->info(TextFormat::GREEN."[SG] Saving All Data...");
 			$this->getServer()->getLogger()->info(TextFormat::GREEN."[SG] Date/Settings SAVED!");
 	}
