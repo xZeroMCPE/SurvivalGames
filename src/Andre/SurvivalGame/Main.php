@@ -172,7 +172,7 @@ class Main extends PluginBase implements Listener
 				$sender->setLevel($this->signlevel);
 				$sender->teleport($this->signlevel->getSpawnLocation());
 				$sender->sendMessage(TextFormat::GREEN."[{$this->getConfig()->get("prefix")}] Teleporting to lobby...");
-				$event->getPlayer()->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}]Player ".$sender->getName()." left the match.");
+				$this->getServer()->broadcastMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}]Player ".$sender->getName()." left the match.");
 				$this->changeStatusSign();
 				if($this->gameStatus==1 && count($this->players)<2)
 				{
