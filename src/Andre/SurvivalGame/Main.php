@@ -1088,7 +1088,7 @@ class Main extends PluginBase implements Listener
  				$this->SetStatus[$username]++;		
 				$player->sendMessage(TextFormat::GREEN."Spawnpoint 24 created!");
  				$player->sendMessage(TextFormat::GREEN."Please click on the deathmatch location");				
- 				$this->pos23=new Vector3($this->pos23["x"]+0.5,$this->pos23["y"],$this->pos23["z"]+0.5);
+ 				$this->pos24=new Vector3($this->pos24["x"]+0.5,$this->pos24["y"],$this->pos24["z"]+0.5);
  				break;		
 			case 25:
 			$this->lastpos=array(
