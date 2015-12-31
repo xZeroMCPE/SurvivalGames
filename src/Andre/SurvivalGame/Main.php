@@ -1100,8 +1100,9 @@ class Main extends PluginBase implements Listener
 				$this->config->save();
 				unset($this->SetStatus[$username]);
 				$player->sendMessage(TextFormat::GREEN."Deathmatch spawnpoint created!");
-				$player->sendMessage(TextFormat::GREEN."All settings completed, 
-				Use /save-all to save the settings then restart server then you may join the arena by clicking the join sign.");
+				$this->saveResource("config.yml");
+				$this->saveResource("points.yml");
+				$player->sendMessage(TextFormat::GREEN."[Setup] The arena has been setup, You may now join!, all settings have been saved.");
 				$this->lastpos=new Vector3($this->lastpos["x"]+0.5,$this->lastpos["y"],$this->lastpos["z"]+0.5);
 				$this->level=$this->getServer()->getLevelByName($this->config->get("pos1")["level"]);					
 			}
