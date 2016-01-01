@@ -534,11 +534,10 @@ class Main extends PluginBase implements Listener
 				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] The tournament starts in 2:30.");
 				break;
 			case 0:
-                                $Arena == $this->getConfig()->get("Arena-Map");
 				$this->gameStatus=2;
 				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "====================");
 				Server::getInstance()->broadcastMessage(TextFormat::RED. "The tournament has begin");
-				Server::getInstance()->broadcastMessage(TextFormat::RED. "Using Map: $Arena");
+				Server::getInstance()->broadcastMessage(TextFormat::RED. "Using Map: Default");
 				Server::getInstance()->broadcastMessage(TextFormat::YELLOW. "Have Fun!");
 				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "====================");
 
