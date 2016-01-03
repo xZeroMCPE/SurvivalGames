@@ -30,7 +30,7 @@ use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
-use ResetChest\Main as ResetChest;
+use ChestReset\Main as ChestReset;
 use killrate\Main as KillRate;
 use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\event\player\PlayerMoveEvent;
@@ -541,7 +541,7 @@ class Main extends PluginBase implements Listener
 				Server::getInstance()->broadcastMessage(TextFormat::YELLOW. "Have Fun!");
 				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "====================");
 
-				$this->resetChest();
+				$this->ChestReset();
 				foreach($this->players as $key=>$val)
 				{
 					$p=$this->getServer()->getPlayer($val["id"]);
@@ -561,7 +561,7 @@ class Main extends PluginBase implements Listener
 				$this->gameStatus=3;
 				$this->sendMessage(TextFormat::GREEN."[{$this->getConfig()->get("prefix")}] All chests have been reset!");
 				$this->lastTime=$this->gameTime;
-				$this->resetChest();
+				$this->ChestReset();
 			}
 		}
 		if($this->gameStatus==3 || $this->gameStatus==4)
@@ -703,9 +703,9 @@ class Main extends PluginBase implements Listener
 		unset($name,$money);
 	}
 	
-	public function resetChest()
+	public function chestReset()
 	{
-		ResetChest::getInstance()->ResetChest();
+		ChestReset::getInstance()->ChestReset();
 	}
 	public function killRate()
 	{
@@ -714,7 +714,7 @@ class Main extends PluginBase implements Listener
 	
 	public function clearChest()
 	{
-		ResetChest::getInstance()->ClearChest();
+		ChestReset::getInstance()->ClearChest();
 	}
 	
 	public function changeStatusSign()
