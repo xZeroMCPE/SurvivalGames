@@ -587,8 +587,7 @@ class Main extends PluginBase implements Listener
 			}
 			else if(count($this->players)==0)
 			{
-				$NewArenaOpen == $this->getConfig()->get("New-Arena-Open");
-				Server::getInstance()->broadcastMessage("[{$this->getConfig()->get("prefix")}] $NewArenaOpen");
+				Server::getInstance()->broadcastMessage("[{$this->getConfig()->get("prefix")}] New Arena has been opened.");
 				$this->gameStatus=0;
 				$this->lastTime=0;
 				$this->clearChest();
