@@ -535,9 +535,10 @@ class Main extends PluginBase implements Listener
 				break;
 			case 0:
 				$this->gameStatus=2;
+				$arena = $this->getConfig()->get("Arena-Map")
 				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "====================");
 				Server::getInstance()->broadcastMessage(TextFormat::RED. "The tournament has begin");
-				Server::getInstance()->broadcastMessage(TextFormat::RED. "Using Map: Default");
+				Server::getInstance()->broadcastMessage(TextFormat::RED. "Using Map: $arena");
 				Server::getInstance()->broadcastMessage(TextFormat::YELLOW. "Have Fun!");
 				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "====================");
 
