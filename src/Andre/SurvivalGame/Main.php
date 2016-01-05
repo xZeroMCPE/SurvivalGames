@@ -1,5 +1,5 @@
 <?php
-namespace Andre\SurvivalGame; ##
+namespace Andre\SurvivalGame;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
@@ -142,7 +142,7 @@ class Main extends PluginBase implements Listener
 		$pm = $this->getServer()->getPluginManager();
 		if(!($this->money = $pm->getPlugin("EconomyAPI"))
         && !($this->money = $pm->getPlugin("PocketMoney")))			{
-			$this->getServer()->getLogger()->info(TextFormat::RED. "[SG] Please Install Economy Or PocketMoney,Then restart server");
+			$this->getServer()->getLogger()->info(TextFormat::RED. "[SG] Please Install Economy Or PocketMoney, Then restart server");
 		} else {
 			$this->getServer()->getLogger()->info(TextFormat::DARK_BLUE."[SG] Using Money System From... ".
 											 TextFormat::YELLOW.$this->money->getName()." v".
@@ -271,7 +271,7 @@ class Main extends PluginBase implements Listener
 			$sender->sendMessage(TextFormat::GREEN . "[SG]Game settings successfully removed.");
 			break;
 		case "start":
-			Server::getInstance()->broadcastMessage(TextFormat::BLUE. "[Game] The Tournament has been forced to start.");
+			Server::getInstance()->broadcastMessage(TextFormat::BLUE. "[Game] The tournament has been forced started.");
 			$this->gameStatus=1;
 			$this->lastTime=5;
 			break;
@@ -560,7 +560,7 @@ class Main extends PluginBase implements Listener
 			if($this->lastTime<=0)
 			{
 				$this->gameStatus=3;
-				$this->sendMessage(TextFormat::GREEN."[{$this->getConfig()->get("prefix")}] All chests have been reset!");
+				$this->sendMessage("[Match] All chests has been reset!");
 				$this->lastTime=$this->gameTime;
 				$this->ChestReset();
 			}
@@ -573,7 +573,7 @@ class Main extends PluginBase implements Listener
 				foreach($this->players as &$pl)
 				{
 					$p=$this->getServer()->getPlayer($pl["id"]);
-					Server::getInstance()->broadcastMessage(TextFormat::BLUE. "Arena: SG-1 Has A New Winner");
+					Server::getInstance()->broadcastMessage("§l§f[Stats]§r §bPlayer:§r $pl has won arena: §eSG-1");
 					$p->setLevel($this->signlevel);
 					$p->getInventory()->clearAll();
 					$p->setMaxHealth(25);
@@ -588,7 +588,7 @@ class Main extends PluginBase implements Listener
 			}
 			else if(count($this->players)==0)
 			{
-				Server::getInstance()->broadcastMessage("[{$this->getConfig()->get("prefix")}] New Arena has been opened.");
+				Server::getInstance()->broadcastMessage("§l§f[Stats]§r §bPlayer:§r $pl has won arena: §eSG-1");
 				$this->gameStatus=0;
 				$this->lastTime=0;
 				$this->clearChest();
