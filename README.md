@@ -3,7 +3,7 @@
 
 # [Download - Below](#)
 https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.0.6/SurvivalGame_v1.0.6.phar 
- - Download the lastest release above
+ - Download the lastest release above.
  - Help us by reporting known bugs/or pul request.
 
 # Next Update
