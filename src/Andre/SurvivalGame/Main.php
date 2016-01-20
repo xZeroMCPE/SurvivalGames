@@ -538,7 +538,7 @@ class Main extends PluginBase implements Listener
 				$arena = $this->getConfig()->get("Arena-Map");
 				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "====================");
 				Server::getInstance()->broadcastMessage(TextFormat::RED. "The tournament has begin");
-				Server::getInstance()->broadcastMessage(TextFormat::RED. "Using Map: $arena");
+				Server::getInstance()->broadcastMessage(TextFormat::RED. "Using Map: $Arena-Map");
 				Server::getInstance()->broadcastMessage(TextFormat::YELLOW. "Have Fun!");
 				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "====================");
 
@@ -560,7 +560,7 @@ class Main extends PluginBase implements Listener
 			if($this->lastTime<=0)
 			{
 				$this->gameStatus=3;
-				$this->sendMessage("[Match] All chests has been reset!");
+				$this->sendMessage("[Match] Chests has been reset!");
 				$this->lastTime=$this->gameTime;
 				$this->ChestReset();
 			}
@@ -569,7 +569,7 @@ class Main extends PluginBase implements Listener
 		{
 			if(count($this->players)==1)
 			{
-				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] You Have Won The match");
+				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] You've This match");
 				foreach($this->players as &$pl)
 				{
 					$p=$this->getServer()->getPlayer($pl["id"]);
