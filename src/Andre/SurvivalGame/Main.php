@@ -1234,7 +1234,9 @@ class Main extends PluginBase implements Listener
 		$this->saveResource("config.yml");
         	$this->saveResource("points.yml");
 			$this->getServer()->getLogger()->info(TextFormat::GREEN."[SG] Saving All Data...");
-			$this->getServer()->getLogger()->info(TextFormat::GREEN."[SG] Date/Settings SAVED!");
+			$this->getServer()->getLogger()->info(TextFormat::GREEN."[SG] Please wait...........");
+			$this->saveResource("config.yml");
+			$this->getServer()->getLogger()->info(TextFormat::GREEN."[SG] All Data/Settings has been fixed");
 	}
 }
 ?>
