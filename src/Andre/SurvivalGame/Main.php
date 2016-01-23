@@ -206,7 +206,7 @@ class Main extends PluginBase implements Listener
 				$kills = $this->points->get($player)[1];
 				$points = $this->points->get($player)[2];
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §l§f--[[§e---+++---§r§f]]--");
-				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §bYou're stats");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §bYour stats");
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §lDeaths: §9$deaths");
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §lKills: §9$kills");
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §l§f--[[§e---+++---§r§f]]--");
@@ -533,6 +533,9 @@ class Main extends PluginBase implements Listener
 			case 150:
 				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] The tournament starts in 2:30.");
 				break;
+			case 160:
+				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("attention")}] You Will Be Released From Your Position When The Match Starts."
+			        break;
 			case 0:
 				$this->gameStatus=2;
 				$arena = $this->getConfig()->get("Arena-Map");
