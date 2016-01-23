@@ -30,6 +30,8 @@ use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
+use ChestReset\Main as ChestReset;
+use killrate\Main as KillRate;
 use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\player\PlayerJoinEvent;
@@ -127,16 +129,10 @@ class Main extends PluginBase implements Listener
 			$this->config->set("waitTime",180);
 		}
 		
-		if(!$this->config->exists("attention"))
-		{
-			$this->config->set("attention","Player");
-		}      
-		
 		$this->endTime=(int)$this->config->get("endTime");//????
 		$this->gameTime=(int)$this->config->get("gameTime");//????
 		$this->waitTime=(int)$this->config->get("waitTime");//????
 		$this->prefix=(int)$this->config->get("prefix");//????
-		$this->attention=(int)$this->config->get("attention");//Allows the popup to broadcast????
 		$this->gameStatus=0;//???? 
 		$this->lastTime=0;//????
 		$this->players=array();//???????
@@ -210,7 +206,7 @@ class Main extends PluginBase implements Listener
 				$kills = $this->points->get($player)[1];
 				$points = $this->points->get($player)[2];
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §l§f--[[§e---+++---§r§f]]--");
-				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §bYour stats");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §bYou're stats");
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §lDeaths: §9$deaths");
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §lKills: §9$kills");
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §l§f--[[§e---+++---§r§f]]--");
@@ -537,9 +533,6 @@ class Main extends PluginBase implements Listener
 			case 150:
 				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] The tournament starts in 2:30.");
 				break;
-			case 160:
-				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("attention")}] You Will Be Released From Your Position When The Match Starts.");
-			        break;
 			case 0:
 				$this->gameStatus=2;
 				$arena = $this->getConfig()->get("Arena-Map");
@@ -549,6 +542,7 @@ class Main extends PluginBase implements Listener
 				Server::getInstance()->broadcastMessage(TextFormat::YELLOW. "Have Fun!");
 				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "====================");
 
+				$this->ChestReset();
 				foreach($this->players as $key=>$val)
 				{
 					$p=$this->getServer()->getPlayer($val["id"]);
@@ -560,7 +554,16 @@ class Main extends PluginBase implements Listener
 				break;
 			}
 		}
-	
+		if($this->gameStatus==2)
+		{
+			$this->lastTime--;
+			if($this->lastTime<=0)
+			{
+				$this->gameStatus=3;
+				$this->sendMessage("[Match] Chests has been reset!");
+				$this->lastTime=$this->gameTime;
+				$this->ChestReset();
+			}
 		}
 		if($this->gameStatus==3 || $this->gameStatus==4)
 		{
@@ -578,6 +581,7 @@ class Main extends PluginBase implements Listener
 					$p->teleport($this->signlevel->getSpawnLocation());
 					unset($pl,$p);
 				}
+				$this->clearChest();
 				$this->players=array();
 				$this->gameStatus=0;
 				$this->lastTime=0;
@@ -587,6 +591,7 @@ class Main extends PluginBase implements Listener
 				Server::getInstance()->broadcastMessage("§l§f[Stats]§r §bPlayer:§r $pl has won arena: §eSG-1");
 				$this->gameStatus=0;
 				$this->lastTime=0;
+				$this->clearChest();
 				$this->ClearAllInv();
 			}
 		}
@@ -666,6 +671,7 @@ class Main extends PluginBase implements Listener
 					$p->setHealth(25);
 					unset($p,$pl);
 				}
+				$this->clearChest();
 				//$this->ClearAllInv();
 				$this->players=array();
 				$this->gameStatus=0;
@@ -696,6 +702,20 @@ class Main extends PluginBase implements Listener
 	public function grantMoney($name,$money){
 		PocketMoney::getInstance()->grantMoney($name,$money);
 		unset($name,$money);
+	}
+	
+	public function chestReset()
+	{
+		ChestReset::getInstance()->ChestReset();
+	}
+	public function killRate()
+	{
+		KillRate::getInstance()->stats($pl,$money);
+	}
+	
+	public function clearChest()
+	{
+		ChestReset::getInstance()->ClearChest();
 	}
 	
 	public function changeStatusSign()
