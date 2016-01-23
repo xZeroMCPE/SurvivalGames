@@ -129,10 +129,16 @@ class Main extends PluginBase implements Listener
 			$this->config->set("waitTime",180);
 		}
 		
+		if(!$this-<config->exists("attention"))
+		{
+			$this->config->set("attention","Player");
+		}      
+		
 		$this->endTime=(int)$this->config->get("endTime");//????
 		$this->gameTime=(int)$this->config->get("gameTime");//????
 		$this->waitTime=(int)$this->config->get("waitTime");//????
 		$this->prefix=(int)$this->config->get("prefix");//????
+		$this->attention=(int)$this->config->get("attention");//Allows the popup to broadcast????
 		$this->gameStatus=0;//???? 
 		$this->lastTime=0;//????
 		$this->players=array();//???????
