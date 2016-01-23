@@ -12,6 +12,9 @@ https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.0.6/SurvivalGa
  - This list will get updated as soon we've done
  with the following first two.
  
++# [Video - Tutorials.](#)
+ --[=[--------]=]-		 +https://youtu.be/eOHb7NfIM24
+
 # How To Setup
 - Make sure you have Economy Installed or PocketMoney. 
 - Download the plugin above
