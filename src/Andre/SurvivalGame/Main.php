@@ -30,8 +30,6 @@ use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
-use ChestReset\Main as ChestReset;
-use killrate\Main as KillRate;
 use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\player\PlayerJoinEvent;
@@ -551,7 +549,6 @@ class Main extends PluginBase implements Listener
 				Server::getInstance()->broadcastMessage(TextFormat::YELLOW. "Have Fun!");
 				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "====================");
 
-				$this->ChestReset();
 				foreach($this->players as $key=>$val)
 				{
 					$p=$this->getServer()->getPlayer($val["id"]);
@@ -563,16 +560,7 @@ class Main extends PluginBase implements Listener
 				break;
 			}
 		}
-		if($this->gameStatus==2)
-		{
-			$this->lastTime--;
-			if($this->lastTime<=0)
-			{
-				$this->gameStatus=3;
-				$this->sendMessage("[Match] Chests has been reset!");
-				$this->lastTime=$this->gameTime;
-				$this->ChestReset();
-			}
+	
 		}
 		if($this->gameStatus==3 || $this->gameStatus==4)
 		{
@@ -590,7 +578,6 @@ class Main extends PluginBase implements Listener
 					$p->teleport($this->signlevel->getSpawnLocation());
 					unset($pl,$p);
 				}
-				$this->clearChest();
 				$this->players=array();
 				$this->gameStatus=0;
 				$this->lastTime=0;
@@ -600,7 +587,6 @@ class Main extends PluginBase implements Listener
 				Server::getInstance()->broadcastMessage("§l§f[Stats]§r §bPlayer:§r $pl has won arena: §eSG-1");
 				$this->gameStatus=0;
 				$this->lastTime=0;
-				$this->clearChest();
 				$this->ClearAllInv();
 			}
 		}
@@ -680,7 +666,6 @@ class Main extends PluginBase implements Listener
 					$p->setHealth(25);
 					unset($p,$pl);
 				}
-				$this->clearChest();
 				//$this->ClearAllInv();
 				$this->players=array();
 				$this->gameStatus=0;
@@ -711,20 +696,6 @@ class Main extends PluginBase implements Listener
 	public function grantMoney($name,$money){
 		PocketMoney::getInstance()->grantMoney($name,$money);
 		unset($name,$money);
-	}
-	
-	public function chestReset()
-	{
-		ChestReset::getInstance()->ChestReset();
-	}
-	public function killRate()
-	{
-		KillRate::getInstance()->stats($pl,$money);
-	}
-	
-	public function clearChest()
-	{
-		ChestReset::getInstance()->ClearChest();
 	}
 	
 	public function changeStatusSign()
