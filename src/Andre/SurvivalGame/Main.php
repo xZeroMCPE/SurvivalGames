@@ -129,7 +129,7 @@ class Main extends PluginBase implements Listener
 			$this->config->set("waitTime",180);
 		}
 		
-		if(!$this-<config->exists("attention"))
+		if(!$this->config->exists("attention"))
 		{
 			$this->config->set("attention","Player");
 		}      
