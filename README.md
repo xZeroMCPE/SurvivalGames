@@ -19,6 +19,9 @@ https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.0.6/SurvivalGa
 - start server use command /sg set
 - follow on screen guide:)
 
+# [Video - Tutorials.](#)
+https://youtu.be/eOHb7NfIM24
+
 
 +
 You guys can go head and download this. It is working i've myself have tested this but there are
