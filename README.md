@@ -32,3 +32,5 @@ Want to be an contributor? Go head and create a issue about it. And we"ll add yo
 YoU MUST have a very good /codding style :) 
 
 # You Must Have Economy Installed!
+# [Download - Here.](#)
+http://forums.pocketmine.net/plugins/%E2%82%AC%C2%A2onom%C2%A5.30/
