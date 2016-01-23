@@ -540,7 +540,7 @@ class Main extends PluginBase implements Listener
 				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] The tournament starts in 2:30.");
 				break;
 			case 160:
-				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("attention")}] You Will Be Released From Your Position When The Match Starts."
+				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("attention")}] You Will Be Released From Your Position When The Match Starts.");
 			        break;
 			case 0:
 				$this->gameStatus=2;
