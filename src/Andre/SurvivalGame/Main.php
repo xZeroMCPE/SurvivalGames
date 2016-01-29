@@ -1180,19 +1180,9 @@ class Main extends PluginBase implements Listener
 		}
 	}
 	
-	public function ClearInv($player)
-	{
-		if(!$player instanceof Player)
-		{
-			unset($player);
-		}
-		$inv=$player->getInventory();
-		if(!$inv instanceof Inventory)
-		{
-			unset($player,$inv);
-		}
-		$inv->clearAll();
-		unset($player,$inv);
+	public function ClearInv($player){
+		$player->getInventory()->setItemInHand(new Item(Item::AIR,0,0));
+   		$player->getInventory()->clearAll(
 	}
 	
 	public function ClearAllInv()
