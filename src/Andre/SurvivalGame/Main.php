@@ -603,19 +603,19 @@ class Main extends PluginBase implements Listener
 			switch($this->lastTime)
 			{
 			case 1:
-				$this->sendTip("§6deathmatch start in §b1 seconds");
+				$this->sendMessage("§6deathmatch start in §b1 seconds");
 				break;
 			case 2:
-				$this->sendTip("§6deathmatch start in §b2 seconds");
+				$this->sendMessage("§6deathmatch start in §b2 seconds");
 				break;
 			case 3:
-				$this->sendTip("§6deathmatch start in §b3 seconds");
+				$this->sendMessage("§6deathmatch start in §b3 seconds");
 				break;
 			case 4:
-				$this->sendTip("§6deathmatch start in §b5 seconds");
+				$this->sendMessage("§6deathmatch start in §b5 seconds");
 				break;
 			case 5:
-				$this->sendTip("§6deathmatch start in §b5 seconds");
+				$this->sendMessage("§6deathmatch start in §b5 seconds");
 				break;	
 			case 10:
 				$this->sendMessage(TextFormat::YELLOW."[{$this->getConfig()->get("prefix")}] Deathmatch will start in 0:10.");
@@ -640,19 +640,19 @@ class Main extends PluginBase implements Listener
 			switch($this->lastTime)
 			{
 			case 1:
-				$this->sendTip(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Ending in " .$this->lastTime. ".");
+				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Ending in " .$this->lastTime. ".");
 				break;
 			case 2:
-				$this->sendTip(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Ending in " .$this->lastTime. ".");
+				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Ending in " .$this->lastTime. ".");
 				break;
 			case 3:
-				$this->sendTip(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Ending in " .$this->lastTime. ".");
+				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Ending in " .$this->lastTime. ".");
 				break;
 			case 4:
-				$this->sendTip(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Ending in " .$this->lastTime. ".");
+				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Ending in " .$this->lastTime. ".");
 				break;
 			case 5:
-				$this->sendTip(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Ending in " .$this->lastTime. ".");
+				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Ending in " .$this->lastTime. ".");
 				break;	
 			case 10:
 				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] The match will end in 0:10.");
