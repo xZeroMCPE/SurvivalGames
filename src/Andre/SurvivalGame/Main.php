@@ -142,7 +142,9 @@ class Main extends PluginBase implements Listener
 		$pm = $this->getServer()->getPluginManager();
 		if(!($this->money = $pm->getPlugin("EconomyAPI"))
         && !($this->money = $pm->getPlugin("PocketMoney")))			{
-			$this->getServer()->getLogger()->info(TextFormat::RED. "[SG] Please Install Economy Or PocketMoney, Then restart. server");
+			$this->getServer()->getLogger()->info(TextFormat::RED. "[SG] ----Warning!!!----");
+			$this->getServer()->getLogger()->info(TextFormat::RED. "[SG] Economy isn't installed!");
+			$this->getServer()->getLogger()->info(TextFormat::RED. "[SG] Please install Economy or PocketMonet to enable SG");
 		} else {
 			$this->getServer()->getLogger()->info(TextFormat::DARK_BLUE."[SG] Using Money System From... ".
 											 TextFormat::YELLOW.$this->money->getName()." v".
@@ -230,7 +232,7 @@ class Main extends PluginBase implements Listener
 		case "set":
 			if($this->config->exists("lastpos"))
 			{
-				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] You already setup the arena. use /sg remove to remove the current arena.");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Arena is already setup. use /sg remove to remove the current arena.");
 			}
 			else
 			{
