@@ -1180,33 +1180,18 @@ class Main extends PluginBase implements Listener
 		}
 	}
 	
-	public function ClearInv($player)
-	{
-		if(!$player instanceof Player)
-		{
-			unset($player);
+	public function ClearInv($player){
+		foreach ($this->players as $player){
+		$player->getInventory()->setItemInHand(new Item(Item::AIR,0,0));
+   		$player->getInventory()->clearAll();
 		}
-		$inv=$player->getInventory();
-		if(!$inv instanceof Inventory)
-		{
-			unset($player,$inv);
-		}
-		$inv->clearAll();
-		unset($player,$inv);
 	}
 	
-	public function ClearAllInv()
-	{
-		foreach($this->players as $pl)
-		{
-			$player=$this->getServer()->getPlayer($pl["id"]);
-			if(!$player instanceof Player)
-			{
-				continue;
-			}
-			$this->ClearInv($player);
+	public function ClearAllInv($player){
+		foreach ($this->players as $player){
+		$player->getInventory()->setItemInHand(new Item(Item::AIR,0,0));
+   		$player->getInventory()->clearAll();
 		}
-		unset($pl,$player);
 	}
 	
 	public function PlayerQuit(PlayerQuitEvent $event){
@@ -1233,11 +1218,11 @@ class Main extends PluginBase implements Listener
 	}
 	
 	public function onDisable(){
-		$this->saveResource("config.yml");
-        	$this->saveResource("points.yml");
 			$this->getServer()->getLogger()->info(TextFormat::GREEN."[SG] Saving All Data...");
-			$this->getServer()->getLogger()->info(TextFormat::GREEN."[SG] Please wait...........");
 			$this->saveResource("config.yml");
+        	        $this->saveResource("points.yml");
+        	        $this->saveResource("config.yml");
+			$this->getServer()->getLogger()->info(TextFormat::GREEN."[SG] Please wait...........");
 			$this->getServer()->getLogger()->info(TextFormat::GREEN."[SG] All Data/Settings has been fixed");
 	}
 }
