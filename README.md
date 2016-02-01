@@ -2,8 +2,8 @@
 [![Join the chat at https://gitter.im/AndreTheGamer/SurvivalGame](https://badges.gitter.im/AndreTheGamer/SurvivalGame.svg)](https://gitter.im/AndreTheGamer/SurvivalGame?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 # Downloads
-[x] SurvivalGame for Pocketmine click [HERE](https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.0.7/SurvivalGame_v1.0.7)
-[x] Download for BukkitPE click [HERE!](https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.1.7/SurvivalGame_v1.0.7BukkitPE.phar)
+- [x] SurvivalGame for Pocketmine click [HERE](https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.0.7/SurvivalGame_v1.0.7)
+- [x] Download for BukkitPE click [HERE!](https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.1.7/SurvivalGame_v1.0.7BukkitPE.phar)
  - Download the lastest release above.
  - Help us by reporting known bugs/or pul request.
 
