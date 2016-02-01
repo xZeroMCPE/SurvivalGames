@@ -4,6 +4,7 @@
 # Downloads
 - [x] SurvivalGame for Pocketmine click [HERE](https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.0.7/SurvivalGame_v1.0.7)
 - [x] Download for BukkitPE click [HERE!](https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.1.7/SurvivalGame_v1.0.7BukkitPE.phar)
+- [x] Also you will need a custom version of Economy that works with BukkitPE download it [HERE!](https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.1.7/EconomyAPI_v2.0.9.phar)
  - Download the lastest release above.
  - Help us by reporting known bugs/or pul request.
 
