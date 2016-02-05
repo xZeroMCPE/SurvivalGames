@@ -26,7 +26,7 @@
 **Plugin requires Economy to be installed for it to work**
 
 # Updated
-**Need a more MCPE SERVER Software? Try BUKKITPE , It's supports Potions, MOB AI, Weather , Redstone , Nether.. and More+**
+** Need a more MCPE SERVER Software? Try BUKKITPE , It's supports Potions, MOB AI, Weather , Redstone , Nether.. and More+**
 =
  Visit the link below
 =
