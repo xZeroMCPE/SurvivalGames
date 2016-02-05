@@ -159,7 +159,7 @@ class Main extends PluginBase implements Listener
 		
 		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] §b=====================");
 		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] §cSome Feature Has Been Disable");
-		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] §cPlease Upgrade to BukkitPE
+		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] §cPlease Upgrade to BukkitPE");
 		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] §cWWW.BUKKITPE.NET");
 		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] §cww.GitHub.com/BukkitPE/BukkitPE");
 		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] §b=====================");
