@@ -8,6 +8,9 @@
 - [ ] Spam Blocker
 - [ ] Multiple arena setup
 - [ ] SurvivalGame Shop
+- [x] Ability to protect arenas
+- [x] Player stats,kills
+- [x] Upgrade to BukkitPE Api
  
 # [Video - Tutorials.](https://youtu.be/eOHb7NfIM24)
  - Click Above to "Watch" it.
@@ -17,11 +20,16 @@
 - Add to BukkitPE installation folder in the plugin folder
 - restart server
 - start server use command /sg set
-- follow on screen guide:)
+- fohllow on screen guide:)
 
 
-+
+***Plugin requires Economy to be installed for it to work***
 
-# You Must Have Economy Installed!
-# [Download - Here.](#)
-http://forums.pocketmine.net/plugins/%E2%82%AC%C2%A2onom%C2%A5.30/
+# Updated
+*** Need a more MCPE SERVER Software? Try BUKKITPE , It's supports Potions, MOB AI, Weather , Redstone , Nether.. and More+***
+=
+ Visit the link below
+=
+__ www.GitHub.com/BukkitPE/BukkitPE__
+__ Site: BukkitPE.net
+
