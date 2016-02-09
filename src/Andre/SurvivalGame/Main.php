@@ -30,7 +30,6 @@ use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
-use ChestReset\Main as ChestReset;
 use killrate\Main as KillRate;
 use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\event\player\PlayerMoveEvent;
@@ -161,14 +160,6 @@ class Main extends PluginBase implements Listener
 		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] File: Config Loaded !");
 		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] File: Point Loaded !");
 		
-		$this->getServer()->getLogger()->info(TextFormat::BLUE."§cERROR ->>>>>>> Upgrade now~ to BukkitPE");
-		
-		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] §b=====================");
-		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] §cSome Feature Has Been Disable");
-		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] §cPlease Upgrade to BukkitPE");
-		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] §cWWW.BUKKITPE.NET");
-		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] §cww.GitHub.com/BukkitPE/BukkitPE");
-		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] §b=====================");
 	
 	}
 
@@ -247,7 +238,7 @@ class Main extends PluginBase implements Listener
 		case "set":
 			if($this->config->exists("lastpos"))
 			{
-				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Arena is already setup. use /sg remove to remove the current arena.");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §cArena is already setup. use /sg remove to remove the current arena.");
 			}
 			else
 			{
@@ -553,11 +544,11 @@ class Main extends PluginBase implements Listener
 			case 0:
 				$this->gameStatus=2;
 				$arena = $this->getConfig()->get("Arena-Map");
-				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "====================");
+				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "===[+==============+]===");
 				Server::getInstance()->broadcastMessage(TextFormat::RED. "The tournament has begin");
 				Server::getInstance()->broadcastMessage(TextFormat::RED. "Using Map: $Arena-Map");
 				Server::getInstance()->broadcastMessage(TextFormat::YELLOW. "Have Fun!");
-				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "====================");
+				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "===[+==============+]===");
 
 				$this->ChestReset();
 				foreach($this->players as $key=>$val)
@@ -586,11 +577,11 @@ class Main extends PluginBase implements Listener
 		{
 			if(count($this->players)==1)
 			{
-				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] You've This match");
+				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] "); // DELETED
 				foreach($this->players as &$pl)
 				{
 					$p=$this->getServer()->getPlayer($pl["id"]);
-					Server::getInstance()->broadcastMessage("§l§f[Stats]§r §bPlayer:§r $pl has won arena: §eSG-1");
+					Server::getInstance()->broadcastMessage(""); //DELETED
 					$p->setLevel($this->signlevel);
 					$p->getInventory()->clearAll();
 					$p->setMaxHealth(25);
@@ -605,7 +596,7 @@ class Main extends PluginBase implements Listener
 			}
 			else if(count($this->players)==0)
 			{
-				Server::getInstance()->broadcastMessage("§l§f[Stats]§r §bPlayer:§r $pl has won arena: §eSG-1");
+				Server::getInstance()->broadcastMessage(""); // DELETED
 				$this->gameStatus=0;
 				$this->lastTime=0;
 				$this->clearChest();
@@ -720,19 +711,9 @@ class Main extends PluginBase implements Listener
 		PocketMoney::getInstance()->grantMoney($name,$money);
 		unset($name,$money);
 	}
-	
-	public function chestReset()
-	{
-		ChestReset::getInstance()->ChestReset();
-	}
 	public function killRate()
 	{
 		KillRate::getInstance()->stats($pl,$money);
-	}
-	
-	public function clearChest()
-	{
-		ChestReset::getInstance()->ClearChest();
 	}
 	
 	public function changeStatusSign()
@@ -1136,26 +1117,7 @@ class Main extends PluginBase implements Listener
 				{
 					$event->getPlayer()->sendMessage("You don't have permission to join this game.");
 				}else{
-				if(!$event->getPlayer()->isOp())
-				{
-					$inv=$event->getPlayer()->getInventory();
-					for($i=0;$i<$inv->getSize();$i++)
-    				{
-    					if($inv->getItem($i)->getID()!=0)
-    					{
-    						$event->getPlayer()->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Please clear you inventory, Before joining");
-    					}
-    				}
-    				foreach($inv->getArmorContents() as $i)
-    				{
-    					if($i->getID()!=0)
-    					{
-    						$event->getPlayer()->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Please clear you inventory, Before joining");
-						}
-					}
-    					}
-    				}
-    			}
+				
 				if($this->gameStatus==0 || $this->gameStatus==1)
 				{
 					if(!isset($this->players[$event->getPlayer()->getName()]))
@@ -1194,7 +1156,8 @@ class Main extends PluginBase implements Listener
 			}
 		}
 	}
-	
+		}
+	}
 	public function ClearInv($player){
 		foreach ($this->players as $player){
 		$player->getInventory()->setItemInHand(new Item(Item::AIR,0,0));
