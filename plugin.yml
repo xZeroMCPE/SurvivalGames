@@ -1,6 +1,6 @@
 name: SurvivalGame
 api: 1.0.0
-version: 1.0.8
+version: 1.0.9
 main: Andre\SurvivalGame\Main
 load: POSTWORLD
 author: AndreTheGamer
@@ -11,7 +11,7 @@ commands:
  sg:
   permission: survivalgame.command.sg
   description: SurvivalGame Main Command
-  usage: /sg <set|remove>
+  usage: §b/sg §d<set> §dto set a arena or §b<remove> §dto remove current settings
  lobby:
   permission: SurvivalGame.command.lobby
   description: back to lobby
