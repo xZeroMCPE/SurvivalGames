@@ -18,17 +18,10 @@
 # [Video - Tutorials.](https://youtu.be/eOHb7NfIM24)
  - Click Above to "Watch" it.
 
-# How To Setup
-- Download from BukkitPE.net click plugins then look for SurvivalGame
-- Add to BukkitPE installation folder in the plugin folder
-- restart server
-- start server use command /sg set
-- fohllow on screen guide:)
-
 
 **Plugin requires Economy to be installed for it to work**
 
-# Updated
+# News
 If you are looking for a more stable MCPE SERVER SOFTWARE, please try BukkitPE
 =
  Visit the link below
