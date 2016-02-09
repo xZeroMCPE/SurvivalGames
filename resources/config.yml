@@ -1,46 +1,46 @@
+##########################################################################################################
+#       _____ __ __  ____  __ __  ____  __ __   ____  _           ____   ____  ___ ___    ___  ____      #
+#      / ___/|  |  ||    \|  |  ||    ||  |  | /    || |         /    | /    ||   |   |  /  _]/ ___/     #
+#     (   \_ |  |  ||  D  )  |  | |  | |  |  ||  o  || |        |   __||  o  || _   _ | /  [_(   \_      #
+#      \__  ||  |  ||    /|  |  | |  | |  |  ||     || |___     |  |  ||     ||  \_/  ||    _]\__  |     #
+#      /  \ ||  :  ||    \|  :  | |  | |  :  ||  _  ||     |    |  |_ ||  _  ||   |   ||   [_ /  \ |     #
+#      \    ||     ||  .  \\   /  |  |  \   / |  |  ||     |    |     ||  |  ||   |   ||     |\    |     #
+#       \___| \__,_||__|\_| \_/  |____|  \_/  |__|__||_____|    |___,_||__|__||___|___||_____| \___|     #
+#                                                                                                        #
+#      Thank-you for downloading the Survival Games plugin                                               #
+#      GitHub: www.github.com/AndreTheGamer                                                              #
+#                                                                                                        #
+##########################################################################################################
+#                                                                                                        #
+#     This is the configuration file for this plugin, here you can change the behaviour of               #
+#     SurvivalGames to suit your needs. If you mess up this file beyond repair, just delete it           #
+#     and it will be re-created with the default settings when the server restarts.                      #
+#                                                                                                        #   
+##########################################################################################################
+
 ---
-#######################################
-# SURVIVIVALGAME 
-# 
-# GitHub: www.github.com/AndreTheGamer/SurvivalGame
-########################################
-
-
-
-########################
-# Prefix Related
-########################
-
-Chat-Prefix: [SG]
+prefix: Game
 Main-Color: blue
 Arena-Map: ChangeME
-
-########################
-# Chat Related
-########################
-
-Allowed Commands:
-- /hi
-- /me
-- /help
+########
+# Block commands on which the player cannot used during matches
+########
 Blocked Commands:
 - /kill
 - /kill all
 - /tp
+########
+# Word you wish to block the player from saying
+########
 Blocked Words:
 - Fuck
 - Bitch
 - Whore
 - Gay
-
-########################
-# Main Settings 
-########################
-# 60 Sec = 1 Minute
-# Time format: seconds
-
+########
+# There are few arena settings, Edit careful
+#######
 gameTime: 180
 waitTime: 300
 endTime: 180
-
 ...
