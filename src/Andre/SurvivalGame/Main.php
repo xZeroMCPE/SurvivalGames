@@ -550,7 +550,7 @@ class Main extends PluginBase implements Listener
 				Server::getInstance()->broadcastMessage(TextFormat::YELLOW. "Have Fun!");
 				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "===[+==============+]===");
 
-				$this->ChestReset();
+				
 				foreach($this->players as $key=>$val)
 				{
 					$p=$this->getServer()->getPlayer($val["id"]);
@@ -570,7 +570,7 @@ class Main extends PluginBase implements Listener
 				$this->gameStatus=3;
 				$this->sendMessage("[Match] Chests has been reset!");
 				$this->lastTime=$this->gameTime;
-				$this->ChestReset();
+				
 			}
 		}
 		if($this->gameStatus==3 || $this->gameStatus==4)
