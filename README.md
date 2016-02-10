@@ -9,10 +9,11 @@
 # Todo
 - [x] Spam Blocker
 - [x] Config File loading
-- [x] SurvivalGame Shop
+- [ ] SurvivalGame Shop
 - [x] Ability to protect arenas
 - [x] Player stats,kills
 - [ ] Multiple arenas setup
+- [ ] VIP Ranks, and VIP+
 - [ ] Some more better features
  
 # [Video - Tutorials.](https://youtu.be/eOHb7NfIM24)
