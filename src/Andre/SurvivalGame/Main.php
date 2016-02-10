@@ -447,6 +447,7 @@ class Main extends PluginBase implements Listener
 		{
 			if(isset($this->players[$event->getEntity()->getName()]))
 			{
+				$this->ClearInv($event->getEntity());
 				unset($this->players[$event->getEntity()->getName()]);
 				if(count($this->players)>1)
 				{
@@ -588,6 +589,7 @@ class Main extends PluginBase implements Listener
 					$p->teleport($this->signlevel->getSpawnLocation());
 					unset($pl,$p);
 				}
+				$this->clearChest();
 				$this->players=array();
 				$this->gameStatus=0;
 				$this->lastTime=0;
@@ -597,6 +599,8 @@ class Main extends PluginBase implements Listener
 				Server::getInstance()->broadcastMessage(""); // DELETED
 				$this->gameStatus=0;
 				$this->lastTime=0;
+				$this->clearChest();
+				$this->ClearAllInv();
 			}
 		}
 		if($this->gameStatus==3)
@@ -675,6 +679,7 @@ class Main extends PluginBase implements Listener
 					$p->setHealth(25);
 					unset($p,$pl);
 				}
+				$this->clearChest();
 				//$this->ClearAllInv();
 				$this->players=array();
 				$this->gameStatus=0;
@@ -1158,6 +1163,7 @@ class Main extends PluginBase implements Listener
 		if(isset($this->players[$event->getPlayer()->getName()]))
 		{	
 			unset($this->players[$event->getPlayer()->getName()]);
+			$this->ClearInv($event->getPlayer());
 			$event->getPlayer()->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}]".$event->getPlayer()->getName()." left the match.");
 			$this->changeStatusSign();
 			if($this->gameStatus==1 && count($this->players)<2)
