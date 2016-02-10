@@ -1158,19 +1158,6 @@ class Main extends PluginBase implements Listener
 	}
 		}
 	}
-	public function ClearInv($player){
-		foreach ($this->players as $player){
-		$player->getInventory()->setItemInHand(new Item(Item::AIR,0,0));
-   		$player->getInventory()->clearAll();
-		}
-	}
-	
-	public function ClearAllInv($player){
-		foreach ($this->players as $player){
-		$player->getInventory()->setItemInHand(new Item(Item::AIR,0,0));
-   		$player->getInventory()->clearAll();
-		}
-	}
 	
 	public function PlayerQuit(PlayerQuitEvent $event){
 		if(isset($this->players[$event->getPlayer()->getName()]))
