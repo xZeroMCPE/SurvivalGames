@@ -675,7 +675,6 @@ class Main extends PluginBase implements Listener
 					$p->setHealth(25);
 					unset($p,$pl);
 				}
-				$this->clearChest();
 				//$this->ClearAllInv();
 				$this->players=array();
 				$this->gameStatus=0;
