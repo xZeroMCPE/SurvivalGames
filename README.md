@@ -2,7 +2,7 @@
 [![Join the chat at https://gitter.im/AndreTheGamer/SurvivalGame](https://badges.gitter.im/AndreTheGamer/SurvivalGame.svg)](https://gitter.im/AndreTheGamer/SurvivalGame?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 # How to  download? & Set up!
-- [x] First download the lastest release [here](https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.0.9/SurvivalGame_v1.0.9.phar) after add the plugin to your server plugin folder
+- [x] First download the lastest release [here](https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.0.10/SurvivalGame_v1.0.10.phar) after add the plugin to your server plugin folder
 - [x] Restart server
 - [x] Use ***/sg*** for main commands list set an arena with ***/sg set***
 
