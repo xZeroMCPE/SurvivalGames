@@ -3,6 +3,7 @@
 
 # How to  download? & Set up!
 - [x] First download the lastest release [here](https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.0.10/SurvivalGame_v1.0.10.phar) after add the plugin to your server plugin folder
+- [x] Although you may download the BukkitPE  version [here](https://github.com/AndreTheGamer/SurvivalGame/releases/download/1.0.10.0/SurvivalGame_v1.0.10.phar)
 - [x] Restart server
 - [x] Use ***/sg*** for main commands list set an arena with ***/sg set***
 
