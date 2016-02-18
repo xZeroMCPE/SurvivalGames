@@ -24,5 +24,5 @@
 **Plugin requires Economy to be installed for it to work**
 
 # Credits
-- [SavionLegendZzz](https://github.com/SavionLegendZzz) project was forked from him. But i extended it and fixed alot og bugs
+- [SavionLegendZzz](https://github.com/SavionLegendZzz) project was forked from him. But i've extended it and fixed alot of bugs
 - [fengberd](https://github.com/fengberd) For providing us the main project source
