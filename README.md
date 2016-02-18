@@ -23,11 +23,6 @@
 
 **Plugin requires Economy to be installed for it to work**
 
-# News
-If you are looking for a more stable MCPE SERVER SOFTWARE, please try BukkitPE
-=
- Visit the link below
-=
-Site: www.BukkitPE.net
-GitHub: www.GitHub.com/BukkitPE/BukkitPE
-
+# Credits
+- [SavionLegendZzz](https://github.com/SavionLegendZzz) project was forked from him. But i extended it and fixed alot og bugs
+- [fengberd](https://github.com/fengberd) For providing us the main project source
