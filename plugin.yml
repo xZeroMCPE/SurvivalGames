@@ -11,7 +11,7 @@ commands:
  sg:
   permission: survivalgame.command.sg
   description: SurvivalGame Main Command
-  usage: §b/sg §d<set> §dto set a arena or §b<remove> §dto remove current settings
+  usage: §d§oUse §e/sg help
  lobby:
   permission: SurvivalGame.command.lobby
   description: back to lobby
