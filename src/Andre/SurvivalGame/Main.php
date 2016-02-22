@@ -341,10 +341,20 @@ class Main extends PluginBase implements Listener
  				$this->pos23=new Vector3($this->pos23["x"]+0.5,$this->pos23["y"],$this->pos23["z"]+0.5);
  				$this->pos24=new Vector3($this->pos24["x"]+0.5,$this->pos24["y"],$this->pos24["z"]+0.5);				
 				$this->lastpos=new Vector3($this->lastpos["x"]+0.5,$this->lastpos["y"],$this->lastpos["z"]+0.5);
-	        	case "setup chest":
-	        		$sender->sendMessage("§b§oPlease tap all chest. When done use §d/sg setup chest done")
-	        	case "setup chest done":
-	        		$sender->sendMessage("§6Chest has been set!")
+	       case "setup chest":
+	        		$sender->sendMessage("§b§oPlease tap all chest. When done use §d/sg setup chest done");
+	       case "setup chest done":
+	        		$sender->sendMessage("§6Chest has been set!");
+	        case "help":
+	        	        $sender->sendMessage("§6--+[ §SurvivalGame Help ]+-");
+	        	        $sender->sendMessage("§e Sub-commands:");
+	        	        $sender->sendMessage("§7setup arena <#>");
+	        	        $sender->sendMessage("§7reload arena <#>");
+	        	        $sender->sendMessage("§7start arena <#>");
+	        	        $sender->sendMessage("§7remove arena <#>");
+	        	        $sender->sendMessage("§7setup chest ");
+	        	        $sender->sendMessage("§7setup chest done>");
+	        	        $sender->sendMessage("§7Chest has been set!");
 			}
 			if(!$this->config->exists("gameTime"))
 			{
