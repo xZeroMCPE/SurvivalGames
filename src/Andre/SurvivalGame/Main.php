@@ -502,8 +502,8 @@ class Main extends PluginBase implements Listener
 				$i++;
 				$p=$this->getServer()->getPlayer($val["id"]);
 				//echo($i."\n");
-				$p->setLevel($this->level);                                     # FIXED THIS LINE!!! YAY!!!
-				eval("\$p->teleport(\$this->pos".$i.");");
+				$p->setLevel($this->level); 
+				eval("\$p->teleport(\$this->pos".$i.");
 				unset($p);
 			}
 			switch($this->lastTime)
@@ -718,7 +718,7 @@ class Main extends PluginBase implements Listener
 		{
 			return false;
 		}
-		$Arena = $this->getConfig()->get("Arena-Map");
+		$Arena = $this->getConfig()->get("Arena");
 		$sign=$this->signlevel->getTile($this->sign);
 		if($sign instanceof Sign)
 		{
