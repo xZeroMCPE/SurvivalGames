@@ -1164,7 +1164,8 @@ class Main extends PluginBase implements Listener
 		{	
 			unset($this->players[$event->getPlayer()->getName()]);
 			$this->ClearInv($event->getPlayer());
-			$event->getPlayer()->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}]".$event->getPlayer()->getName()." left the match.");
+			$playername = $event->getPlayer()->getName()
+			$this->broadcastMessage("$playername has left the match")
 			$this->changeStatusSign();
 			if($this->gameStatus==1 && count($this->players)<2)
 			{
