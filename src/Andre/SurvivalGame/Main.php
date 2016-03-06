@@ -137,9 +137,9 @@ class Main extends PluginBase implements Listener
 		$this->endTime=(int)$this->config->get("endTime");//????
 		$this->gameTime=(int)$this->config->get("gameTime");//????
 		$this->waitTime=(int)$this->config->get("waitTime");//????
-		$this->prefix=(int)$this->config->get("prefix");//????
+		$this->prefix=$this->config->get("prefix");//????
 		$this->gameStatus=0;//???? 
-		$this->lastTime=0;//????
+		$this->lastTime=(int)0;//????
 		$this->players=array();//???????
 		$this->SetStatus=array();//????
 		$this->all=0;//??????
