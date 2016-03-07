@@ -137,9 +137,9 @@ class Main extends PluginBase implements Listener
 		$this->endTime=(int)$this->config->get("endTime");//????
 		$this->gameTime=(int)$this->config->get("gameTime");//????
 		$this->waitTime=(int)$this->config->get("waitTime");//????
-		$this->prefix=(int)$this->config->get("prefix");//????
+		$this->prefix=$this->config->get("prefix");//????
 		$this->gameStatus=0;//???? 
-		$this->lastTime=0;//????
+		$this->lastTime=(int)0;//????
 		$this->players=array();//???????
 		$this->SetStatus=array();//????
 		$this->all=0;//??????
@@ -186,8 +186,8 @@ class Main extends PluginBase implements Listener
 				{
 					$this->gameStatus=0;
 					$this->lastTime=0;
-					$Arena-Join == $this->getConfig()->get("Arena-Join");
-					$event->getPlayer()->sendMessage("[{$this->getConfig()->get("prefix")}] $Arena-Join");
+					$Arena == $this->getConfig()->get("Arena-Join");
+					$event->getPlayer()->sendMessage("[{$this->getConfig()->get("prefix")}] $Arena");
 					/*foreach($this->players as $pl)
 					{
 						$p=$this->getServer()->getPlayer($pl["id"]);
@@ -235,7 +235,7 @@ class Main extends PluginBase implements Listener
                                 $sender->sendMessage("You dont have permissions to run this command.");
 				return true; }
 				break; 
-		case "set":
+		case "setup arena 1":
 			if($this->config->exists("lastpos"))
 			{
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §cArena is already setup. use /sg remove to remove the current arena.");
@@ -247,7 +247,7 @@ class Main extends PluginBase implements Listener
 				$sender->sendMessage(TextFormat::DARK_BLUE. "[{$this->getConfig()->get("prefix")}] Tap a sign to set join sign.");
 			}
 			break;
-		case "remove":
+		case "remove arena 1":
 			$this->config->remove("sign");
 			$this->config->remove("pos1");
 			$this->config->remove("pos2");
@@ -276,14 +276,14 @@ class Main extends PluginBase implements Listener
 			$this->config->remove("lastpos");
 			$this->config->save();
 			unset($this->sign,$this->pos1,$this->pos2,$this->pos3,$this->pos4,$this->pos5,$this->pos6,$this->pos7,$this->pos8,$this->pos9,$this->pos10,$this->pos11,$this->pos12,$this->pos13,$this->pos14,$this->pos15,$this->pos16,$this->pos17,$this->pos18,$this->pos19,$this->pos20,$this->pos21,$this->pos22,$this->pos23,$this->pos24,$this->lastpos);
-			$sender->sendMessage(TextFormat::GREEN . "[SG]Game settings successfully removed.");
+			$sender->sendMessage(TextFormat::GREEN . "[SG] Game settings successfully removed.");
 			break;
-		case "start":
+		case "start arena 1":
 			Server::getInstance()->broadcastMessage(TextFormat::BLUE. "[Game] The tournament has been forced started.");
 			$this->gameStatus=1;
 			$this->lastTime=5;
 			break;
-		case "reload":
+		case "reload arena 1":
 			@mkdir($this->getDataFolder(), 0777, true);
 			$this->config=new Config($this->getDataFolder() . "config.yml", Config::YAML, array());
 			if($this->config->exists("lastpos"))
@@ -341,6 +341,20 @@ class Main extends PluginBase implements Listener
  				$this->pos23=new Vector3($this->pos23["x"]+0.5,$this->pos23["y"],$this->pos23["z"]+0.5);
  				$this->pos24=new Vector3($this->pos24["x"]+0.5,$this->pos24["y"],$this->pos24["z"]+0.5);				
 				$this->lastpos=new Vector3($this->lastpos["x"]+0.5,$this->lastpos["y"],$this->lastpos["z"]+0.5);
+	       case "setup chest":
+	        		$sender->sendMessage("§b§oPlease tap all chest. When done use §d/sg setup chest done");
+	       case "setup chest done":
+	        		$sender->sendMessage("§6Chest has been set!");
+	        case "help":
+	        	        $sender->sendMessage("§6--+[ §SurvivalGame Help ]+-");
+	        	        $sender->sendMessage("§e Sub-commands:");
+	        	        $sender->sendMessage("§7setup arena <#>");
+	        	        $sender->sendMessage("§7reload arena <#>");
+	        	        $sender->sendMessage("§7start arena <#>");
+	        	        $sender->sendMessage("§7remove arena <#>");
+	        	        $sender->sendMessage("§7setup chest ");
+	        	        $sender->sendMessage("§7setup chest done>");
+	        	        $sender->sendMessage("§7Chest has been set!");
 			}
 			if(!$this->config->exists("gameTime"))
 			{
@@ -502,26 +516,26 @@ class Main extends PluginBase implements Listener
 				$i++;
 				$p=$this->getServer()->getPlayer($val["id"]);
 				//echo($i."\n");
-				$p->setLevel($this->level);                                     # FIXED THIS LINE!!! YAY!!!
-				eval("\$p->teleport(\$this->pos".$i.");");
+				$p->setLevel($this->level); 
+				eval("\$p->teleport(\$this->pos".$i.");
 				unset($p);
 			}
 			switch($this->lastTime)
 			{
 			case 1:
-				$this->sendMessage("§6start in §b".$this->lastTime." seconds");
+				$this->sendMessage("§6Starts in §b".$this->lastTime." seconds");
 				break;
 			case 2:
-				$this->sendMessage("§6start in §b".$this->lastTime." seconds");
+				$this->sendMessage("§6Starts in §b".$this->lastTime." seconds");
 				break;
 			case 3:
-				$this->sendMessage("§6start in §b".$this->lastTime." seconds");
+				$this->sendMessage("§6Starts in §b".$this->lastTime." seconds");
 				break;
 			case 4:
-				$this->sendMessage("§6start in §b".$this->lastTime." seconds");
+				$this->sendMessage("§6Starts in §b".$this->lastTime." seconds");
 				break;
 			case 5:
-				$this->sendMessage("§6start in §b".$this->lastTime." seconds");
+				$this->sendMessage("§6Starts in §b".$this->lastTime." seconds");
 				break;	
 			case 10:
 				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] The tournament starts in 0:10.");
@@ -546,7 +560,7 @@ class Main extends PluginBase implements Listener
 				$arena = $this->getConfig()->get("Arena-Map");
 				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "===[+==============+]===");
 				Server::getInstance()->broadcastMessage(TextFormat::RED. "The tournament has begin");
-				Server::getInstance()->broadcastMessage(TextFormat::RED. "Using Map: $Arena-Map");
+				Server::getInstance()->broadcastMessage(TextFormat::RED. "Using Map: $Arena");
 				Server::getInstance()->broadcastMessage(TextFormat::YELLOW. "Have Fun!");
 				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "===[+==============+]===");
 
@@ -581,7 +595,7 @@ class Main extends PluginBase implements Listener
 				foreach($this->players as &$pl)
 				{
 					$p=$this->getServer()->getPlayer($pl["id"]);
-					Server::getInstance()->broadcastMessage(""); //DELETED
+					Server::getInstance()->broadcastMessage(""); // Will be deleted soon, since it's a bad practice
 					$p->setLevel($this->signlevel);
 					$p->getInventory()->clearAll();
 					$p->setMaxHealth(25);
@@ -589,7 +603,6 @@ class Main extends PluginBase implements Listener
 					$p->teleport($this->signlevel->getSpawnLocation());
 					unset($pl,$p);
 				}
-				$this->clearChest();
 				$this->players=array();
 				$this->gameStatus=0;
 				$this->lastTime=0;
@@ -599,7 +612,6 @@ class Main extends PluginBase implements Listener
 				Server::getInstance()->broadcastMessage(""); // DELETED
 				$this->gameStatus=0;
 				$this->lastTime=0;
-				$this->clearChest();
 				$this->ClearAllInv();
 			}
 		}
@@ -609,19 +621,19 @@ class Main extends PluginBase implements Listener
 			switch($this->lastTime)
 			{
 			case 1:
-				$this->sendMessage("§6deathmatch start in §b1 seconds");
+				$this->sendMessage("§6Deathmatch starts in §b1 seconds");
 				break;
 			case 2:
-				$this->sendMessage("§6deathmatch start in §b2 seconds");
+				$this->sendMessage("§6Deathmatch starts in §b2 seconds");
 				break;
 			case 3:
-				$this->sendMessage("§6deathmatch start in §b3 seconds");
+				$this->sendMessage("§6Deathmatch starts in §b3 seconds");
 				break;
 			case 4:
-				$this->sendMessage("§6deathmatch start in §b5 seconds");
+				$this->sendMessage("§6Deathmatch starts in §b5 seconds");
 				break;
 			case 5:
-				$this->sendMessage("§6deathmatch start in §b5 seconds");
+				$this->sendMessage("§6Deathmatch starts in §b5 seconds");
 				break;	
 			case 10:
 				$this->sendMessage(TextFormat::YELLOW."[{$this->getConfig()->get("prefix")}] Deathmatch will start in 0:10.");
@@ -679,8 +691,6 @@ class Main extends PluginBase implements Listener
 					$p->setHealth(25);
 					unset($p,$pl);
 				}
-				$this->clearChest();
-				//$this->ClearAllInv();
 				$this->players=array();
 				$this->gameStatus=0;
 				$this->lastTime=0;
@@ -722,7 +732,7 @@ class Main extends PluginBase implements Listener
 		{
 			return false;
 		}
-		$Arena = $this->getConfig()->get("Arena-Map");
+		$Arena = $this->getConfig()->get("Arena");
 		$sign=$this->signlevel->getTile($this->sign);
 		if($sign instanceof Sign)
 		{
@@ -1163,8 +1173,8 @@ class Main extends PluginBase implements Listener
 		if(isset($this->players[$event->getPlayer()->getName()]))
 		{	
 			unset($this->players[$event->getPlayer()->getName()]);
-			$this->ClearInv($event->getPlayer());
-			$event->getPlayer()->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}]".$event->getPlayer()->getName()." left the match.");
+			$playername = $event->getPlayer()->getName()
+			$this->broadcastMessage("$playername has left the match")
 			$this->changeStatusSign();
 			if($this->gameStatus==1 && count($this->players)<2)
 			{
