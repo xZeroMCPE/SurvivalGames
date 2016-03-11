@@ -235,7 +235,7 @@ class Main extends PluginBase implements Listener
                                 $sender->sendMessage("You dont have permissions to run this command.");
 				return true; }
 				break; 
-		case "setup arena 1":
+		case "set":
 			if($this->config->exists("lastpos"))
 			{
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §cArena is already setup. use /sg remove to remove the current arena.");
@@ -247,7 +247,7 @@ class Main extends PluginBase implements Listener
 				$sender->sendMessage(TextFormat::DARK_BLUE. "[{$this->getConfig()->get("prefix")}] Tap a sign to set join sign.");
 			}
 			break;
-		case "remove arena 1":
+		case "remove":
 			$this->config->remove("sign");
 			$this->config->remove("pos1");
 			$this->config->remove("pos2");
@@ -278,12 +278,12 @@ class Main extends PluginBase implements Listener
 			unset($this->sign,$this->pos1,$this->pos2,$this->pos3,$this->pos4,$this->pos5,$this->pos6,$this->pos7,$this->pos8,$this->pos9,$this->pos10,$this->pos11,$this->pos12,$this->pos13,$this->pos14,$this->pos15,$this->pos16,$this->pos17,$this->pos18,$this->pos19,$this->pos20,$this->pos21,$this->pos22,$this->pos23,$this->pos24,$this->lastpos);
 			$sender->sendMessage(TextFormat::GREEN . "[SG] Game settings successfully removed.");
 			break;
-		case "start arena 1":
+		case "start":
 			Server::getInstance()->broadcastMessage(TextFormat::BLUE. "[Game] The tournament has been forced started.");
 			$this->gameStatus=1;
 			$this->lastTime=5;
 			break;
-		case "reload arena 1":
+		case "reload":
 			@mkdir($this->getDataFolder(), 0777, true);
 			$this->config=new Config($this->getDataFolder() . "config.yml", Config::YAML, array());
 			if($this->config->exists("lastpos"))
@@ -341,20 +341,6 @@ class Main extends PluginBase implements Listener
  				$this->pos23=new Vector3($this->pos23["x"]+0.5,$this->pos23["y"],$this->pos23["z"]+0.5);
  				$this->pos24=new Vector3($this->pos24["x"]+0.5,$this->pos24["y"],$this->pos24["z"]+0.5);				
 				$this->lastpos=new Vector3($this->lastpos["x"]+0.5,$this->lastpos["y"],$this->lastpos["z"]+0.5);
-	       case "setup chest":
-	        		$sender->sendMessage("§b§oPlease tap all chest. When done use §d/sg setup chest done");
-	       case "setup chest done":
-	        		$sender->sendMessage("§6Chest has been set!");
-	        case "help":
-	        	        $sender->sendMessage("§6--+[ §SurvivalGame Help ]+-");
-	        	        $sender->sendMessage("§e Sub-commands:");
-	        	        $sender->sendMessage("§7setup arena <#>");
-	        	        $sender->sendMessage("§7reload arena <#>");
-	        	        $sender->sendMessage("§7start arena <#>");
-	        	        $sender->sendMessage("§7remove arena <#>");
-	        	        $sender->sendMessage("§7setup chest ");
-	        	        $sender->sendMessage("§7setup chest done>");
-	        	        $sender->sendMessage("§7Chest has been set!");
 			}
 			if(!$this->config->exists("gameTime"))
 			{
