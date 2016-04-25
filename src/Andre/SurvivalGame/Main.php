@@ -503,7 +503,7 @@ class Main extends PluginBase implements Listener
 				$p=$this->getServer()->getPlayer($val["id"]);
 				//echo($i."\n");
 				$p->setLevel($this->level); 
-				eval("\$p->teleport(\$this->pos".$i.");
+				eval("\$p->teleport(\$this->pos".$i."");
 				unset($p);
 			}
 			switch($this->lastTime)
