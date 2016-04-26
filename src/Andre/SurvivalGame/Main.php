@@ -279,7 +279,7 @@ class Main extends PluginBase implements Listener
 			$sender->sendMessage(TextFormat::GREEN . "[SG] Game settings successfully removed.");
 			break;
 		case "start":
-			Server::getInstance()->broadcastMessage(TextFormat::BLUE. "[Game] The tournament has been forced started.");
+			Server::getInstance()->broadcastMessage(TextFormat::BLUE. "The tournament has been forced started.");
 			$this->gameStatus=1;
 			$this->lastTime=5;
 			break;
