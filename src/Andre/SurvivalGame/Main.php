@@ -134,15 +134,15 @@ class Main extends PluginBase implements Listener
 			$this->config->set("waitTime",180);
 		}
 		
-		$this->endTime=(int)$this->config->get("endTime");//????
-		$this->gameTime=(int)$this->config->get("gameTime");//????
-		$this->waitTime=(int)$this->config->get("waitTime");//????
-		$this->prefix=$this->config->get("prefix");//????
-		$this->gameStatus=0;//???? 
-		$this->lastTime=(int)0;//????
-		$this->players=array();//???????
-		$this->SetStatus=array();//????
-		$this->all=0;//??????
+		$this->endTime=(int)$this->config->get("endTime");
+		$this->gameTime=(int)$this->config->get("gameTime");
+		$this->waitTime=(int)$this->config->get("waitTime");
+		$this->prefix=$this->config->get("prefix");
+		$this->gameStatus=0;
+		$this->lastTime=(int)0;
+		$this->players=array();
+		$this->SetStatus=array();
+		$this->all=0;
 		$this->config->save();
 		$pm = $this->getServer()->getPluginManager();
 		if(!($this->money = $pm->getPlugin("EconomyAPI"))
@@ -276,7 +276,7 @@ class Main extends PluginBase implements Listener
 			$this->config->remove("lastpos");
 			$this->config->save();
 			unset($this->sign,$this->pos1,$this->pos2,$this->pos3,$this->pos4,$this->pos5,$this->pos6,$this->pos7,$this->pos8,$this->pos9,$this->pos10,$this->pos11,$this->pos12,$this->pos13,$this->pos14,$this->pos15,$this->pos16,$this->pos17,$this->pos18,$this->pos19,$this->pos20,$this->pos21,$this->pos22,$this->pos23,$this->pos24,$this->lastpos);
-			$sender->sendMessage(TextFormat::GREEN . "[SG] Game settings successfully removed.");
+			$sender->sendMessage(TextFormat::GREEN . "Game settings successfully removed.");
 			break;
 		case "start":
 			Server::getInstance()->broadcastMessage(TextFormat::BLUE. "The tournament has been forced started.");
