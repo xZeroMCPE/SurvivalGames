@@ -556,6 +556,7 @@ class Main extends PluginBase implements Listener
 					$p=$this->getServer()->getPlayer($val["id"]);
 					$p->setMaxHealth(25);
 					$p->setHealth(25);
+					$p->setGamemode(0); //Those who cheats
 					$p->setLevel($this->level);
 				}
 				$this->all=count($this->players);
