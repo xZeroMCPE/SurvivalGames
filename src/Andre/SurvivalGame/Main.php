@@ -1150,7 +1150,7 @@ class Main extends PluginBase implements Listener
 						}else{
 						if(count($this->players)==8 && $this->gameStatus==1 && $this->lastTime>5)
 						{
-							$event->getPlayer()->sendMessage(TextFormat::GREEN. "[{$this->getConfig()->get("prefix")}] This match is already running!");
+							$event->getPlayer()->sendMessage(TextFormat::GREEN. "[{$this->getConfig()->get("prefix")}] $Matched_Running");
 							$this->lastTime=5;
 						}
 							$this->changeStatusSign();
@@ -1163,7 +1163,7 @@ class Main extends PluginBase implements Listener
 				}
 				else
 				{
-					$event->getPlayer()->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] This match already started!");
+					$event->getPlayer()->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] $Matched_Running");
 				}
 			}
 		}
@@ -1182,7 +1182,7 @@ class Main extends PluginBase implements Listener
 			{
 				$this->gameStatus=0;
 				$this->lastTime=0;
-				$event->getPlayer()->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] There aren't enough players. Countdown has stopped.");
+				$event->getPlayer()->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] $Not_Enough_Players");
 				/*foreach($this->players as $pl)
 				{
 					$p=$this->getServer()->getPlayer($pl["id"]);
