@@ -59,6 +59,9 @@ class Main extends PluginBase implements Listener
 		$this->saveResource("config.yml");
 		$this->config = new Config($this->getDataFolder(). "config.yml", Config::YAML, array());
 				
+	// ------------------ MULTILANGUAGE SUPPORT ------------------ \\
+	$this->saveResource("Message-Eng.yml");
+	$this->lang->Eng = new Config($this->getDataFolder(). "Message-Eng.yml", Config::YAML, array());
 		if($this->config->exists("lastpos"))
 		{
 			$this->sign=$this->config->get("sign");
