@@ -3,3 +3,27 @@
 
 ## If you make any mistakes, just remove the lang file and it will
 ## generate a fresh new copy after reloading/restarting server!
+
+
+# Game events related
+Already-Playing: You already playing a match
+Joined-Arena: You have joined a tournament
+Not-In-Match: You are not in a match
+Matched-Running: This match is already running!
+No-Permission: You dont have permissions to run this command
+Force-Start: The tournament has been forced started
+Blocked-Command: That command is blocked
+
+# Timer related
+Starting: Starting in {time}
+Timer: The tournament starts {time}
+Not-Enough-Players: There aren't enough players. Countdown has stopped
+
+# Arena related: Use \n for a new line
+Started: The tournament has begin
+Chest-Refilled: Chests has been reset!
+Deathmatch-starting: Deathmatch starts in {time} 
+Deatchmatch-started: The deathmatch has started. May the best one win
+Match-Ending: Ending in {time}
+Match-Ended: The match has ended
+
