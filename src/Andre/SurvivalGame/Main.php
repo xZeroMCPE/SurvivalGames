@@ -60,9 +60,29 @@ class Main extends PluginBase implements Listener
 		$this->config = new Config($this->getDataFolder(). "config.yml", Config::YAML, array());
 				
 	// ------------------ MULTILANGUAGE SUPPORT ------------------ \\
-	$this->saveResource("Message-Eng.yml");
-	$this->lang->Eng = new Config($this->getDataFolder(). "Message-Eng.yml", Config::YAML, array());
-		if($this->config->exists("lastpos"))
+     $Lang = $this->getConfig()->get('Language');
+        if(!(is_dir($this->getDataFolder()."Message-".$Lang.".yml"))){
+			$this->plugin->saveResource("Message-".$Lang.".yml", true);
+		 }else{
+			 
+		 }
+		$ChooseLang = $this->getResource("Message-" . $Lang . ".yml"); 
+		$Already-Playing  = $ChooseLang->get("Already-Playing"); 
+                $Joined-Arena  = $ChooseLang->get("Joined-Arena"); 
+                $Not-In-Match  = $ChooseLang->get("Not-In-Match"); 
+                $Matched-Running  = $ChooseLang->get("Matched-Running"); 
+                $No-Permission  = $ChooseLang->get("No-Permission"); 
+                $Force-Start  = $ChooseLang->get("Force-Start"); 
+                $Blocked-Command  = $ChooseLang->get("Blocked-Command"); 
+                $Starting  = $ChooseLang->get("Starting"); 
+                $Timer  = $ChooseLang->get("Timer"); 
+                $Not-Enough-Players  = $ChooseLang->get("Not-Enough-Players"); 
+                $Started  = $ChooseLang->get("Started"); 
+                $Chest-Refilled  = $ChooseLang->get("Chest-Refilled"); 
+                $Deathmatch-starting  = $ChooseLang->get("Deathmatch-starting"); 
+                $Deatchmatch-started  = $ChooseLang->get("Deatchmatch-started"); 
+                $Match-Ending  = $ChooseLang->get("Match-Ending"); 
+                $Match-Ended  = $ChooseLang->get("Match-Ended"); 
 		{
 			$this->sign=$this->config->get("sign");
 			$this->pos1=$this->config->get("pos1");
