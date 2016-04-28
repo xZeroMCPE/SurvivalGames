@@ -17,30 +17,11 @@
 #     and it will be re-created with the default settings when the server restarts.                      #
 #                                                                                                        #   
 ##########################################################################################################
-
+####
+# For Language you may choose Eng, which is the default one.
+# We are working on adding more lang file
+####
 ---
-prefix: Game
-Main-Color: blue
-Arena-Map: ChangeMe!
-########
-# Block commands on which the player cannot used during matches
-########
-Blocked Commands:
-- /kill
-- /kill all
-- /tp
-########
-# Word you wish to block the player from saying
-########
-Blocked Words:
-- Fuck
-- Bitch
-- Whore
-- Gay
-########
-# There are few arena settings, Edit careful
-#######
-gameTime: 180
-waitTime: 300
-endTime: 180
+prefix: SurvivalGame
+Language: eng
 ...
