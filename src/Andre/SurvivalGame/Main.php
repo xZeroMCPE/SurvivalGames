@@ -64,7 +64,7 @@ class Main extends PluginBase implements Listener
         if(!(is_dir($this->getDataFolder()."Message-".$Lang.".yml"))){
 			$this->plugin->saveResource("Message-".$Lang.".yml", true);
 		 }else{
-			 
+			 $this->getServer()->getLogger()->info("Loading lang file.....");
 		 }
 		$ChooseLang = $this->getResource("Message-" . $Lang . ".yml"); 
 		$Already-Playing  = $ChooseLang->get("Already-Playing"); 
