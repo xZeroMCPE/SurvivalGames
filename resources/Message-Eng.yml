@@ -6,24 +6,24 @@
 
 
 # Game events related
-Already-Playing: You already playing a match
-Joined-Arena: You have joined a tournament
-Not-In-Match: You are not in a match
-Matched-Running: This match is already running!
-No-Permission: You dont have permissions to run this command
-Force-Start: The tournament has been forced started
-Blocked-Command: That command is blocked
+Already_Playing: You already playing a match
+Joined_Arena: You have joined a tournament
+Not_In_Match: You are not in a match
+Matched_Running: This match is already running!
+No_Permission: You dont have permissions to run this command
+Force_Start: The tournament has been forced started
+Blocked_Command: That command is blocked
 
 # Timer related
 Starting: Starting in {time}
 Timer: The tournament starts {time}
-Not-Enough-Players: There aren't enough players. Countdown has stopped
+Not_Enough_Players: There aren't enough players. Countdown has stopped
 
 # Arena related: Use \n for a new line
 Started: The tournament has begin
-Chest-Refilled: Chests has been reset!
-Deathmatch-starting: Deathmatch starts in {time} 
-Deatchmatch-started: The deathmatch has started. May the best one win
-Match-Ending: Ending in {time}
-Match-Ended: The match has ended
+Chest_Refilled: Chests has been reset!
+Deathmatch_starting: Deathmatch starts in {time} 
+Deatchmatch_started: The deathmatch has started. May the best one win
+Match_Ending: Ending in {time}
+Match_Ended: The match has ended
 
