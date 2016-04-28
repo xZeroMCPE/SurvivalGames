@@ -67,22 +67,22 @@ class Main extends PluginBase implements Listener
 			 $this->getServer()->getLogger()->info("Loading lang file.....");
 		 }
 		$ChooseLang = $this->getResource("Message-" . $Lang . ".yml"); 
-		$Already-Playing  = $ChooseLang->get("Already-Playing"); 
-                $Joined-Arena  = $ChooseLang->get("Joined-Arena"); 
-                $Not-In-Match  = $ChooseLang->get("Not-In-Match"); 
-                $Matched-Running  = $ChooseLang->get("Matched-Running"); 
-                $No-Permission  = $ChooseLang->get("No-Permission"); 
-                $Force-Start  = $ChooseLang->get("Force-Start"); 
-                $Blocked-Command  = $ChooseLang->get("Blocked-Command"); 
+		$Already_Playing  = $ChooseLang->get("Already_Playing"); 
+                $Joined_Arena  = $ChooseLang->get("Joined_Arena"); 
+                $Not_In_Match  = $ChooseLang->get("Not_In_-Match"); 
+                $Matched_Running  = $ChooseLang->get("Matched_Running"); 
+                $No_Permission  = $ChooseLang->get("No_Permission"); 
+                $Force_Start  = $ChooseLang->get("Force_Start"); 
+                $Blocked_Command  = $ChooseLang->get("Blocked_Command"); 
                 $Starting  = $ChooseLang->get("Starting"); 
                 $Timer  = $ChooseLang->get("Timer"); 
-                $Not-Enough-Players  = $ChooseLang->get("Not-Enough-Players"); 
+                $Not_Enough_Players  = $ChooseLang->get("Not_Enough_Players"); 
                 $Started  = $ChooseLang->get("Started"); 
-                $Chest-Refilled  = $ChooseLang->get("Chest-Refilled"); 
-                $Deathmatch-starting  = $ChooseLang->get("Deathmatch-starting"); 
-                $Deatchmatch-started  = $ChooseLang->get("Deatchmatch-started"); 
-                $Match-Ending  = $ChooseLang->get("Match-Ending"); 
-                $Match-Ended  = $ChooseLang->get("Match-Ended"); 
+                $Chest_Refilled  = $ChooseLang->get("Chest_Refilled"); 
+                $Deathmatch_starting  = $ChooseLang->get("Deathmatch_starting"); 
+                $Deatchmatch_started  = $ChooseLang->get("Deatchmatch_started"); 
+                $Match_Ending  = $ChooseLang->get("Match_Ending"); 
+                $Match_Ended  = $ChooseLang->get("Match_Ended"); 
 		{
 			$this->sign=$this->config->get("sign");
 			$this->pos1=$this->config->get("pos1");
@@ -193,8 +193,7 @@ class Main extends PluginBase implements Listener
 		{
 			if($this->gameStatus>=2)
 			{
-				$In-Match == $this->getConfig()->get("In-Match");
-				$sender->sendMessage("[{$this->getConfig()->get("prefix")}] $In-Match");
+				$sender->sendMessage("[{$this->getConfig()->get("prefix")}] $Already_Playing");
 				return;
 			}
 			if(isset($this->players[$sender->getName()]))
@@ -209,7 +208,6 @@ class Main extends PluginBase implements Listener
 				{
 					$this->gameStatus=0;
 					$this->lastTime=0;
-					$Arena == $this->getConfig()->get("Arena-Join");
 					$event->getPlayer()->sendMessage("[{$this->getConfig()->get("prefix")}] $Arena");
 					/*foreach($this->players as $pl)
 					{
@@ -222,7 +220,7 @@ class Main extends PluginBase implements Listener
 			}
 			else
 			{
-				$sender->sendMessage(TextFormat::RED . "[{$this->getConfig()->get("prefix")}] You are not in a match.");
+				$sender->sendMessage(TextFormat::RED . "[{$this->getConfig()->get("prefix")}] $Not_In_Match");
 			}
 			return true;
 		}
@@ -255,7 +253,7 @@ class Main extends PluginBase implements Listener
 				return true;
                                 }
                         }else{
-                                $sender->sendMessage("You dont have permissions to run this command.");
+                                $sender->sendMessage("$No_Permissio");
 				return true; }
 				break; 
 		case "set":
@@ -302,7 +300,7 @@ class Main extends PluginBase implements Listener
 			$sender->sendMessage(TextFormat::GREEN . "Game settings successfully removed.");
 			break;
 		case "start":
-			Server::getInstance()->broadcastMessage(TextFormat::BLUE. "The tournament has been forced started.");
+			Server::getInstance()->broadcastMessage(TextFormat::BLUE. "$Force_Start");
 			$this->gameStatus=1;
 			$this->lastTime=5;
 			break;
@@ -454,7 +452,7 @@ class Main extends PluginBase implements Listener
 			break;
 		default:
 			$event->setCancelled();
-			$event->getPlayer()->sendMessage("[{$this->getConfig()->get("prefix")}] That command is blocked");
+			$event->getPlayer()->sendMessage("[{$this->getConfig()->get("prefix")}] $Blocked_Command");
 			break;
 		}
 		unset($event);
@@ -532,48 +530,42 @@ class Main extends PluginBase implements Listener
 			switch($this->lastTime)
 			{
 			case 1:
-				$this->sendMessage("§6Starts in §b".$this->lastTime." seconds");
+				$this->sendMessage("$Starting ".$this->lastTime." seconds");
 				break;
 			case 2:
-				$this->sendMessage("§6Starts in §b".$this->lastTime." seconds");
+				$this->sendMessage("$Starting ".$this->lastTime." seconds");
 				break;
 			case 3:
-				$this->sendMessage("§6Starts in §b".$this->lastTime." seconds");
+				$this->sendMessage("$Starting ".$this->lastTime." seconds");
 				break;
 			case 4:
-				$this->sendMessage("§6Starts in §b".$this->lastTime." seconds");
+				$this->sendMessage("$Starting ".$this->lastTime." seconds");
 				break;
 			case 5:
-				$this->sendMessage("§6Starts in §b".$this->lastTime." seconds");
+				$this->sendMessage("$Starting ".$this->lastTime." seconds");
 				break;	
 			case 10:
-				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] The tournament starts in 0:10.");
+				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] $Time 0:10.");
 				break;
 			case 30:
-				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] The tournament starts in 0:30.");
+				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] $Time 0:30.");
 				break;
 			case 60:
-				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] The tournament starts in 1:00.");
+				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] $Time 1:00.");
 				break;
 			case 90:
-				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] The tournament starts in 1:30.");
+				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] $Time 1:30.");
 				break;
 			case 120:
-				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] The tournament starts in 2:00.");
+				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] $Time 2:00.");
 				break;
 			case 150:
-				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] The tournament starts in 2:30.");
+				$this->sendMessage(TextFormat::RED."[{$this->getConfig()->get("prefix")}] $Time 2:30.");
 				break;
 			case 0:
 				$this->gameStatus=2;
 				$arena = $this->getConfig()->get("Arena-Map");
-				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "===[+==============+]===");
-				Server::getInstance()->broadcastMessage(TextFormat::RED. "The tournament has begin");
-				Server::getInstance()->broadcastMessage(TextFormat::RED. "Using Map: $Arena");
-				Server::getInstance()->broadcastMessage(TextFormat::YELLOW. "Have Fun!");
-				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "===[+==============+]===");
-
-				
+				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "$Started");
 				foreach($this->players as $key=>$val)
 				{
 					$p=$this->getServer()->getPlayer($val["id"]);
@@ -592,7 +584,7 @@ class Main extends PluginBase implements Listener
 			if($this->lastTime<=0)
 			{
 				$this->gameStatus=3;
-				$this->sendMessage("[Match] Chests has been reset!");
+				$this->sendMessage("$Chest_Refilled");
 				$this->lastTime=$this->gameTime;
 				
 			}
@@ -631,25 +623,25 @@ class Main extends PluginBase implements Listener
 			switch($this->lastTime)
 			{
 			case 1:
-				$this->sendMessage("§6Deathmatch starts in §b1 seconds");
+				$this->sendMessage("$Deathmatch_starting §b1 seconds");
 				break;
 			case 2:
-				$this->sendMessage("§6Deathmatch starts in §b2 seconds");
+				$this->sendMessage("$Deathmatch_starting §b2 seconds");
 				break;
 			case 3:
-				$this->sendMessage("§6Deathmatch starts in §b3 seconds");
+				$this->sendMessage("$Deathmatch_starting §b3 seconds");
 				break;
 			case 4:
-				$this->sendMessage("§6Deathmatch starts in §b5 seconds");
+				$this->sendMessage("$Deathmatch_starting §b5 seconds");
 				break;
 			case 5:
-				$this->sendMessage("§6Deathmatch starts in §b5 seconds");
+				$this->sendMessage("$Deathmatch_starting §b5 seconds");
 				break;	
 			case 10:
 				$this->sendMessage(TextFormat::YELLOW."[{$this->getConfig()->get("prefix")}] Deathmatch will start in 0:10.");
 				break;
 			case 0:
-				$this->sendMessage(TextFormat::YELLOW."[{$this->getConfig()->get("prefix")}] The deathmatch has started. May the best one win.");
+				$this->sendMessage(TextFormat::YELLOW."[{$this->getConfig()->get("prefix")}] $Deatchmatch_started);
 				foreach($this->players as $pl)
 				{
 					$p=$this->getServer()->getPlayer($pl["id"]);
@@ -668,29 +660,29 @@ class Main extends PluginBase implements Listener
 			switch($this->lastTime)
 			{
 			case 1:
-				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Ending in " .$this->lastTime. ".");
+				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] $Match_Ending " .$this->lastTime. ".");
 				break;
 			case 2:
-				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Ending in " .$this->lastTime. ".");
+				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] $Match_Ending " .$this->lastTime. ".");
 				break;
 			case 3:
-				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Ending in " .$this->lastTime. ".");
+				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] $Match_Endingn " .$this->lastTime. ".");
 				break;
 			case 4:
-				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Ending in " .$this->lastTime. ".");
+				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] $Match_Ending " .$this->lastTime. ".");
 				break;
 			case 5:
-				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Ending in " .$this->lastTime. ".");
+				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] $Match_Ending " .$this->lastTime. ".");
 				break;	
 			case 10:
-				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] The match will end in 0:10.");
+				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] $Match_Ending 0:10.");
 				break;
 			//case 20:
 			case 30:
-				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] The match will end in 0:30.");
+				$this->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] $Match_Ending 0:30.");
 				break;
 			case 0:
-				$this->sendMessage(TextFormat::BLUE. "[{$this->getConfig()->get("prefix")}] The match has ended.");
+				$this->sendMessage(TextFormat::BLUE. "[{$this->getConfig()->get("prefix")}] $Match_Ended");
 				foreach($this->players as $pl)
 				{
 					$p=$this->getServer()->getPlayer($pl["id"]);
