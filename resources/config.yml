@@ -21,7 +21,7 @@
 ---
 prefix: Game
 Main-Color: blue
-Arena-Map: ChangeME
+Arena-Map: ChangeMe!
 ########
 # Block commands on which the player cannot used during matches
 ########
