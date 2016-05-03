@@ -65,11 +65,11 @@ class Main extends PluginBase implements Listener
 			$this->plugin->saveResource("Message-".$Lang.".yml", true);
 		 }else{
 			 $this->getServer()->getLogger()->info("Loading lang file.....");
-		 }
+		 }//There is a problem in this section,hope you fix them.
 		$ChooseLang = $this->getResource("Message-" . $Lang . ".yml"); 
 		$Already_Playing  = $ChooseLang->get("Already_Playing"); 
                 $Joined_Arena  = $ChooseLang->get("Joined_Arena"); 
-                $Not_In_Match  = $ChooseLang->get("Not_In_-Match"); 
+                $Not_In_Match  = $ChooseLang->get("Not_In_Match"); 
                 $Matched_Running  = $ChooseLang->get("Matched_Running"); 
                 $No_Permission  = $ChooseLang->get("No_Permission"); 
                 $Force_Start  = $ChooseLang->get("Force_Start"); 
@@ -510,7 +510,7 @@ class Main extends PluginBase implements Listener
 				$p=$this->getServer()->getPlayer($val["id"]);
 				//echo($i."\n");
 				$p->setLevel($this->level);
-				eval("\$p->teleport(\$this->pos".$i.");");
+				eval("\$p->teleport(\$this->pos".$i .");");
 				unset($p);
 			}
 		}
@@ -524,7 +524,7 @@ class Main extends PluginBase implements Listener
 				$p=$this->getServer()->getPlayer($val["id"]);
 				//echo($i."\n");
 				$p->setLevel($this->level); 
-				eval("\$p->teleport(\$this->pos".$i."");
+				eval("\$p->teleport(\$this->pos".$i .");");
 				unset($p);
 			}
 			switch($this->lastTime)
@@ -641,7 +641,7 @@ class Main extends PluginBase implements Listener
 				$this->sendMessage(TextFormat::YELLOW."[{$this->getConfig()->get("prefix")}] Deathmatch will start in 0:10.");
 				break;
 			case 0:
-				$this->sendMessage(TextFormat::YELLOW."[{$this->getConfig()->get("prefix")}] $Deatchmatch_started);
+				$this->sendMessage(TextFormat::YELLOW."[{$this->getConfig()->get("prefix")}] $Deatchmatch_started");
 				foreach($this->players as $pl)
 				{
 					$p=$this->getServer()->getPlayer($pl["id"]);
@@ -1175,8 +1175,8 @@ class Main extends PluginBase implements Listener
 		if(isset($this->players[$event->getPlayer()->getName()]))
 		{	
 			unset($this->players[$event->getPlayer()->getName()]);
-			$playername = $event->getPlayer()->getName()
-			$this->broadcastMessage("$playername has left the match")
+			$playername = $event->getPlayer()->getName();
+			Server::getInstance()->broadcastMessage("§3" .$playername . "has left the match");
 			$this->changeStatusSign();
 			if($this->gameStatus==1 && count($this->players)<2)
 			{
