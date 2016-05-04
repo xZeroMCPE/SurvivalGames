@@ -227,6 +227,18 @@ class Main extends PluginBase implements Listener
 		if(!isset($args[0])){unset($sender,$cmd,$label,$args);return false;};
 		switch ($args[0])
 		{
+		case "help":
+		    if($sender->hasPermission("sg.command.help") or $sender->hasPermission("sg.command") or $sender->hasPermission("sg")){
+				$sender->sendMessage("§d§o-------SurvivalGame-help-------");		
+				$sender->sendMessage("§d§oUse §e/sg stats");
+				$sender->sendMessage("§d§oUse §e/sg set");
+				$sender->sendMessage("§d§oUse §e/sg remove");
+				$sender->sendMessage("§d§oUse §e/sg start");
+				$sender->sendMessage("§d§oUse §e/sg reload");
+				$sender->sendMessage("§d§o-------Welcome to use SurvivalGame-------");	
+			    return true; }
+				break;
+		if($sender instanceof Player){
 		case "stats":
 			if($sender->hasPermission("sg.command.stats") or $sender->hasPermission("sg.command") or $sender->hasPermission("sg")){
                                 if(!(isset($args[1]))){
@@ -255,8 +267,13 @@ class Main extends PluginBase implements Listener
                         }else{
                                 $sender->sendMessage("$No_Permissio");
 				return true; }
+		}else{
+			$sender->sendMessage(TextFormat::RED . "§d§oPlease use the command in game!!");
+			return true;	
+		}
 				break; 
 		case "set":
+		if($sender instanceof Player){
 			if($this->config->exists("lastpos"))
 			{
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §cArena is already setup. use /sg remove to remove the current arena.");
@@ -267,6 +284,10 @@ class Main extends PluginBase implements Listener
 				$this->SetStatus[$name]=0;
 				$sender->sendMessage(TextFormat::DARK_BLUE. "[{$this->getConfig()->get("prefix")}] Tap a sign to set join sign.");
 			}
+		}else{
+			$sender->sendMessage(TextFormat::RED . "§d§oPlease use the command in game!!");
+			return true;		
+		}
 			break;
 		case "remove":
 			$this->config->remove("sign");
