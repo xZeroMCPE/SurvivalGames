@@ -246,26 +246,26 @@ class Main extends PluginBase implements Listener
 		                $deaths = $this->points->get($player)[0];
 				$kills = $this->points->get($player)[1];
 				$points = $this->points->get($player)[2];
-				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §l§f--[[§e---+++---§r§f]]--");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] ---------------");
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §bYou're stats");
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §lDeaths: §9$deaths");
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §lKills: §9$kills");
-				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §l§f--[[§e---+++---§r§f]]--");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] ---------------");
 				return true;
                         }else{
                                 $player = $args[1];
 				$deaths = $this->points->get($player)[0];
 				$kills = $this->points->get($player)[1];
 				$points = $this->points->get($player)[2];
-				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §l§f--[[§e---+++---§r§f]]--");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] ---------------");
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §bPlayer: §9$player Stats");
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §lDeaths: §9$deaths");
 				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §lKills: §9$kills");
-				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §l§f--[[§e---+++---§r§f]]--");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] ---------------");
 				return true;
                                 }
                         }else{
-                                $sender->sendMessage("$No_Permissio");
+                                $sender->sendMessage("$No_Permission");
 				return true; }
 		}else{
 			$sender->sendMessage(TextFormat::RED . "§d§oPlease use the command in game!!");
@@ -276,13 +276,13 @@ class Main extends PluginBase implements Listener
 		if($sender instanceof Player){
 			if($this->config->exists("lastpos"))
 			{
-				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §cArena is already setup. use /sg remove to remove the current arena.");
+				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §cThat arena has already been setup, remove it and try agin");
 			}
 			else
 			{
 				$name=$sender->getName();
 				$this->SetStatus[$name]=0;
-				$sender->sendMessage(TextFormat::DARK_BLUE. "[{$this->getConfig()->get("prefix")}] Tap a sign to set join sign.");
+				$sender->sendMessage(TextFormat::DARK_BLUE. "[{$this->getConfig()->get("prefix")}] You must now set the join sign\nTap a sign to set it now");
 			}
 		}else{
 			$sender->sendMessage(TextFormat::RED . "§d§oPlease use the command in game!!");
@@ -792,7 +792,7 @@ class Main extends PluginBase implements Listener
 			case 0:
 				if($event->getBlock()->getID() != 63 && $event->getBlock()->getID() != 68)
 				{
-					$player->sendMessage(TextFormat::GREEN."[SurvivalGame] Click a sign to set join sign.");
+					$player->sendMessage(TextFormat::GREEN."[SurvivalGame] You must now set the join sign\nTap a sign to set it now");
 				}
 				$this->sign=array(
 					"x" =>$block->getX(),
@@ -1132,7 +1132,7 @@ class Main extends PluginBase implements Listener
 				$player->sendMessage(TextFormat::GREEN."Deathmatch spawnpoint created!");
 				$this->saveResource("config.yml");
 				$this->saveResource("points.yml");
-				$player->sendMessage(TextFormat::GREEN."[Setup] The arena has been setup, You may now join!, all settings have been saved.");
+				$player->sendMessage(TextFormat::GREEN."[Setup] The arena has been setup!\nYou may join it through the sign!");
 				$this->lastpos=new Vector3($this->lastpos["x"]+0.5,$this->lastpos["y"],$this->lastpos["z"]+0.5);
 				$this->level=$this->getServer()->getLevelByName($this->config->get("pos1")["level"]);					
 			}
@@ -1218,10 +1218,8 @@ class Main extends PluginBase implements Listener
 	public function onDisable(){
 			$this->getServer()->getLogger()->info(TextFormat::GREEN."[SG] Saving All Data...");
 			$this->saveResource("config.yml");
-        	        $this->saveResource("points.yml");
-        	        $this->saveResource("config.yml");
-			$this->getServer()->getLogger()->info(TextFormat::GREEN."[SG] Please wait...........");
-			$this->getServer()->getLogger()->info(TextFormat::GREEN."[SG] All Data/Settings has been fixed");
+        	        $this->saveResource("points.yml");;
+			$this->getServer()->getLogger()->info(TextFormat::GREEN."[SG] All files was saved");
 	}
 }
 ?>
