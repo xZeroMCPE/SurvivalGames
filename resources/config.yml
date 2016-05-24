@@ -20,8 +20,10 @@
 ####
 # For Language you may choose Eng, which is the default one.
 # We are working on adding more lang file
+# If you decide not to use Economy you can set it to 'False"
 ####
 ---
 prefix: SurvivalGame
 Language: eng
+Economy: true
 ...
