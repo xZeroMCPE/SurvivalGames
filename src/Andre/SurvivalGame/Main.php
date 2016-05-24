@@ -229,13 +229,13 @@ class Main extends PluginBase implements Listener
 		{
 		case "help":
 		    if($sender->hasPermission("sg.command.help") or $sender->hasPermission("sg.command") or $sender->hasPermission("sg")){
-				$sender->sendMessage("§d§o-------SurvivalGame-help-------");		
+				$sender->sendMessage("§d§o-------SurvivalGame Help-------");		
 				$sender->sendMessage("§d§oUse §e/sg stats");
 				$sender->sendMessage("§d§oUse §e/sg set");
 				$sender->sendMessage("§d§oUse §e/sg remove");
 				$sender->sendMessage("§d§oUse §e/sg start");
 				$sender->sendMessage("§d§oUse §e/sg reload");
-				$sender->sendMessage("§d§o-------Welcome to use SurvivalGame-------");	
+				$sender->sendMessage("§d§o--------------------------------);	
 			    return true; }
 				break;
 		if($sender instanceof Player){
