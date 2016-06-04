@@ -587,8 +587,15 @@ class Main extends PluginBase implements Listener
 				$this->gameStatus=2;
 				$arena = $this->getConfig()->get("Arena-Map");
 				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "$Started");
-				foreach($this->players as $key=>$val)
-				{
+				foreach($this->players as $key=>$val){
+					if($p->hasPermission("survivalgames.vip")){
+						$p->getInventory()->addItem(new Item(Item::IRON_HELMET, 0, 1));
+						$p->getInventory()->addItem(new Item(Item::IRON_CHESTPLATE, 0, 1));
+						$p->getInventory()->addItem(new Item(Item::IRON_LEGGINGS, 0, 1));
+						$p->getInventory()->addItem(new Item(Item::IRON_BOOTS, 0, 1));
+						$p->getInventory()->addItem(new Item(Item::DIAMOND_AXE, 0, 1));
+					}
+					
 					$p=$this->getServer()->getPlayer($val["id"]);
 					$p->setMaxHealth(25);
 					$p->setHealth(25);
