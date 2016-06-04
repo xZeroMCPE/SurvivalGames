@@ -235,7 +235,7 @@ class Main extends PluginBase implements Listener
 				$sender->sendMessage("§d§oUse §e/sg remove");
 				$sender->sendMessage("§d§oUse §e/sg start");
 				$sender->sendMessage("§d§oUse §e/sg reload");
-				$sender->sendMessage("§d§o--------------------------------);	
+				$sender->sendMessage("§d§o--------------------------------");	
 			    return true; }
 				break;
 		if($sender instanceof Player){
