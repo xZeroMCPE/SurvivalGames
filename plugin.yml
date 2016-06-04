@@ -34,3 +34,6 @@ permissions:
    sg.touch.startgame:
     description: click the sign and join the game
     default: true
+   survivalgames.vip:
+    description: Kit for vips
+    default: op
