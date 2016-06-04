@@ -42,7 +42,7 @@ Plus many, many more features included in this plugin!
 - [x] Ability to protect arenas
 - [x] Player stats,kills
 - [ ] Multiple arenas setup
-- [ ] VIP Rank
+- [x] VIP Kits
 - [ ] Some more better features
  
 # [Video - Tutorials.](https://youtu.be/eOHb7NfIM24)
