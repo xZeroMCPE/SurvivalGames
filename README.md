@@ -36,13 +36,13 @@ Plus many, many more features included in this plugin!
 - [x] Use ***/sg*** for main commands list set an arena with ***/sg set***
 
 # Todo
-- [x] Spam Blocker
+- [ ] Spam Blocker
 - [x] Config File loading
 - [ ] SurvivalGame Shop
 - [x] Ability to protect arenas
 - [x] Player stats,kills
 - [ ] Multiple arenas setup
-- [ ] VIP Ranks, and VIP+
+- [ ] VIP Rank
 - [ ] Some more better features
  
 # [Video - Tutorials.](https://youtu.be/eOHb7NfIM24)
