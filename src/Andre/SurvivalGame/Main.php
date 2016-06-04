@@ -25,7 +25,6 @@ use pocketmine\tile\Tile;
 use pocketmine\utils\TextFormat;
 use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\player\PlayerQuitEvent;
-use onebone\economyapi\EconomyAPI;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\block\BlockPlaceEvent;
@@ -46,7 +45,6 @@ class Main extends PluginBase implements Listener
 	}
 
 	public function onEnable() {
-		$this->api = EconomyAPI::getInstance();
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
 		$this->getServer()->getScheduler()->scheduleRepeatingTask(new CallbackTask([$this,"gameTimber"]),20);
 		@mkdir($this->getDataFolder(), 0777, true);
@@ -62,11 +60,11 @@ class Main extends PluginBase implements Listener
 	// ------------------ MULTILANGUAGE SUPPORT ------------------ \\
      $Lang = $this->getConfig()->get('Language');
         if(!(is_dir($this->getDataFolder()."Message-".$Lang.".yml"))){
-			$this->plugin->saveResource("Message-".$Lang.".yml", true);
+			$this->saveResource("Message-".$Lang.".yml", true);
 		 }else{
 			 $this->getServer()->getLogger()->info("Loading lang file.....");
 		 }//There is a problem in this section,hope you fix them.
-		$ChooseLang = $this->getResource("Message-" . $Lang . ".yml"); 
+		$ChooseLang = (new Config($this->getDataFolder() . "Message-" . $Lang . ".yml", Config::YAML)); 
 		$Already_Playing  = $ChooseLang->get("Already_Playing"); 
                 $Joined_Arena  = $ChooseLang->get("Joined_Arena"); 
                 $Not_In_Match  = $ChooseLang->get("Not_In_Match"); 
@@ -167,17 +165,6 @@ class Main extends PluginBase implements Listener
 		$this->SetStatus=array();
 		$this->all=0;
 		$this->config->save();
-		$pm = $this->getServer()->getPluginManager();
-		if(!($this->money = $pm->getPlugin("EconomyAPI"))
-        && !($this->money = $pm->getPlugin("PocketMoney")))			{
-			$this->getServer()->getLogger()->info(TextFormat::RED. "[SG] ----Warning!!!----");
-			$this->getServer()->getLogger()->info(TextFormat::RED. "[SG] Economy isn't installed!");
-			$this->getServer()->getLogger()->info(TextFormat::RED. "[SG] Please install Economy or PocketMoney to enable SG");
-		} else {
-			$this->getServer()->getLogger()->info(TextFormat::DARK_BLUE."[SG] Using Money System From... ".
-											 TextFormat::YELLOW.$this->money->getName()." v".
-											 $this->money->getDescription()->getVersion());
-											 }
 		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] SurvivalGame Has Been Enable");
 		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] By: AndreTheGamer");
 		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] File: Config Loaded !");
@@ -238,8 +225,8 @@ class Main extends PluginBase implements Listener
 				$sender->sendMessage("§d§o--------------------------------");	
 			    return true; }
 				break;
-		if($sender instanceof Player){
 		case "stats":
+		if($sender instanceof Player){
 			if($sender->hasPermission("sg.command.stats") or $sender->hasPermission("sg.command") or $sender->hasPermission("sg")){
                                 if(!(isset($args[1]))){
                                 $player = $sender->getName();
@@ -728,32 +715,6 @@ class Main extends PluginBase implements Listener
 			}
 		}
 		$this->changeStatusSign();
-	}
-	
-	public function getMoney($name){
-		return EconomyAPI::getInstance()->myMoney($name);
-	}
-	
-	public function addMoney($name,$money){
-		EconomyAPI::getInstance()->addMoney($name,$money);
-		unset($name,$money);
-	}
-	
-	public function setMoney($name,$money){
-		EconomyAPI::getInstance()->setMoney($name,$money);
-		unset($name,$money);
-	}
-	public function seeMoney($name){
-		return PocketMoney::getInstance()->money($name);
-	}
-	
-	public function grantMoney($name,$money){
-		PocketMoney::getInstance()->grantMoney($name,$money);
-		unset($name,$money);
-	}
-	public function killRate()
-	{
-		KillRate::getInstance()->stats($pl,$money);
 	}
 	
 	public function changeStatusSign()
