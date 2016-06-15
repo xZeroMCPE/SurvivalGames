@@ -387,7 +387,7 @@ class Main extends PluginBase implements Listener
 			$this->SetStatus=array();
 			$this->all=0;//
 			$this->config->save();
-			$sender->sendMessage(TextFormat::GREEN. "[SG] Config reloaded");
+			$sender->sendMessage(TextFormat::GREEN. "SurvivalGames config has been reloaded");
 			break;
 		default:
 			return false;
@@ -612,7 +612,6 @@ class Main extends PluginBase implements Listener
 				foreach($this->players as &$pl)
 				{
 					$p=$this->getServer()->getPlayer($pl["id"]);
-					Server::getInstance()->broadcastMessage(""); // Will be deleted soon, since it's a bad practice
 					$p->setLevel($this->signlevel);
 					$p->getInventory()->clearAll();
 					$p->setMaxHealth(25);
