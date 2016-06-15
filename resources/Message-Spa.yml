@@ -1,0 +1,28 @@
+#English Language File
+#This is the default lang file!
+
+## If you make any mistakes, just remove the lang file and it will
+## generate a fresh new copy after reloading/restarting server!
+
+
+# Game events related
+Already_Playing: Ya que juega un partido
+Joined_Arena: Te has unido a un torneo
+Not_In_Match: Usted no esta en un partido
+Matched_Running: Este partido ya se esta ejecutando !
+No_Permission: Usted no tiene permisos para ejecutar este comando
+Force_Start: El torneo se ha visto obligado comenza
+Blocked_Command: Ese comando se bloquea
+
+# Timer related
+Starting: a partir de {time}
+Timer: TEl torneo comienza {time}
+Not_Enough_Players: No hay suficientes jugadores . Cuenta atra ha dejado de
+
+# Arena related: Use \n for a new line
+Started: El torneo comenzara tiene
+Chest_Refilled: Cofres se ha restablecido !
+Deathmatch_starting: A muerte comienza en {time} 
+Deatchmatch_started: El combate a muerte se ha iniciado. De mayo gane el mejor
+Match_Ending: que termina en {time}
+Match_Ended: El partido ha terminado
