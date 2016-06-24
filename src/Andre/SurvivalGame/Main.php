@@ -729,7 +729,7 @@ class Main extends PluginBase implements Listener
 			switch($this->gameStatus)
 			{
 			case 0:
-				$sign->setText("§7[§aJoin§7] §b:§9".count($this->players)."§9/16","§l§fMap:§r §b$Arena","§eSG 1");
+				$sign->setText("§7[§aJoin§7] §b:§9".count($this->players)."§9/24","§l§fMap:§r §b$Arena","§eSG 1");
 				break;
 			case 1:
 				$sign->setText("§7[§aJoin§7] §b:§9".count($this->players)."§9/24","§l§fMap:§r §b$Arena","§eSG 1");
