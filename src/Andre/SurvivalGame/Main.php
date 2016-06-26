@@ -272,7 +272,7 @@ class Main extends PluginBase implements Listener
 				$sender->sendMessage(TextFormat::DARK_BLUE. "[{$this->getConfig()->get("prefix")}] You must now set the join sign\nTap a sign to set it now");
 			}
 		}else{
-			$sender->sendMessage(TextFormat::RED . "§d§oPlease use the command in game!!");
+			$sender->sendMessage(TextFormat::RED . "You may only use ths command in-game!");
 			return true;		
 		}
 			break;
