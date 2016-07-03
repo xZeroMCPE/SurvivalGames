@@ -1,4 +1,4 @@
-#English Language File
+#Spanish Language File
 #This is the default lang file!
 
 ## If you make any mistakes, just remove the lang file and it will
@@ -6,23 +6,23 @@
 
 
 # Game events related
-Already_Playing: Ya que juega un partido
-Joined_Arena: Te has unido a un torneo
-Not_In_Match: Usted no esta en un partido
-Matched_Running: Este partido ya se esta ejecutando !
+Already_Playing: Ya esta jugando a una partida
+Joined_Arena: Te has unido a una arena
+Not_In_Match: Usted no esta en ninguna arena
+Matched_Running: ¡La partida esta iniciada!
 No_Permission: Usted no tiene permisos para ejecutar este comando
-Force_Start: El torneo se ha visto obligado comenza
-Blocked_Command: Ese comando se bloquea
+Force_Start: La arena se ha forzado para que comience
+Blocked_Command: Ese comando esta bloqueado
 
 # Timer related
 Starting: a partir de {time}
-Timer: TEl torneo comienza {time}
-Not_Enough_Players: No hay suficientes jugadores . Cuenta atra ha dejado de
+Timer: El torneo comienza en {time}
+Not_Enough_Players: No hay suficientes jugadores. Se ha parado la cuenta atras
 
 # Arena related: Use \n for a new line
-Started: El torneo comenzara tiene
-Chest_Refilled: Cofres se ha restablecido !
-Deathmatch_starting: A muerte comienza en {time} 
-Deatchmatch_started: El combate a muerte se ha iniciado. De mayo gane el mejor
-Match_Ending: que termina en {time}
-Match_Ended: El partido ha terminado
+Started: La arena acaba de comenzar
+Chest_Refilled: Se han regenerado los cofres!
+Deathmatch_starting: La Deathmatch comienza en {time} 
+Deatchmatch_started: La Deathmatch se ha iniciado. Puede ser que el más fuerte gane
+Match_Ending: Termina en {time}
+Match_Ended: La partida ha terminado
