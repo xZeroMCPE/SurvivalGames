@@ -15,13 +15,13 @@ Force_Start: La arena se ha forzado para que comience
 Blocked_Command: Ese comando esta bloqueado
 
 # Timer related
-Starting: a partir de {time}
-Timer: El torneo comienza en {time}
+Starting: Empieza en {time}
+Timer: La arena comienza en {time}
 Not_Enough_Players: No hay suficientes jugadores. Se ha parado la cuenta atras
 
 # Arena related: Use \n for a new line
 Started: La arena acaba de comenzar
-Chest_Refilled: Se han regenerado los cofres!
+Chest_Refilled: ¡Se han regenerado los cofres!
 Deathmatch_starting: La Deathmatch comienza en {time} 
 Deatchmatch_started: La Deathmatch se ha iniciado. Puede ser que el más fuerte gane
 Match_Ending: Termina en {time}
