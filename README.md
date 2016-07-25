@@ -1,4 +1,4 @@
-# SurvivalGame
+# SurvivalGames
 =================================
 Survival Games is a plugin that has the aim of creating a fully automated hunger games style experience. The plugin was created to be simple to use, and to be easily setup on any type of server, no matter the size or type! Survival Games provides a way for your server to have a full fledged, fully automated hunger games experience for any player. We are working hard to expand this to be the best "ever" exisit SurvivalGame plugin
 
