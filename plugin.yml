@@ -1,39 +1,39 @@
-name: SurvivalGame
+name: SurvivalGames
 api: 1.0.0
 version: 1.0.9
-main: Andre\SurvivalGame\Main
+main: Andre\SurvivalGames\Main
 load: POSTWORLD
 author: AndreTheGamer
-website: https://github.com/andrethegamer/survivalgame
+website: https://github.com/xZeroMCPE/SurvivalGames
 
 
 commands:
  sg:
-  permission: survivalgame.command.sg
-  description: SurvivalGame Main Command
+  permission: SurvivalGamess.command.sg
+  description: SurvivalGamess Main Command
   usage: §d§oUse §e/sg help
  lobby:
-  permission: SurvivalGame.command.lobby
+  permission: SurvivalGames.command.lobby
   description: back to lobby
   usage: /lobby
 permissions:
- SurvivalGame.*:
+ SurvivalGamess.*:
   description: the main permission
   default: op
   children:
-   SurvivalGame.command.*:
+   SurvivalGamess.command.*:
     description: use commands in plugin
     default: op
     children:
-     SurvivalGame.command.lobby:
+     SurvivalGamess.command.lobby:
       description: back to lobby
       default: true
-     SurvivalGame.command.sg:
-      description: set SurvivalGame
+     SurvivalGamess.command.sg:
+      description: set SurvivalGamess
       default: op
    sg.touch.startgame:
     description: click the sign and join the game
     default: true
-   survivalgames.vip:
+   SurvivalGamess.vip:
     description: Kit for vips
     default: op

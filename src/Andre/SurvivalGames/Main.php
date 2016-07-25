@@ -1,5 +1,5 @@
 <?php
-namespace Andre\SurvivalGame;
+namespace Andre\SurvivalGames;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
@@ -46,7 +46,7 @@ class Main extends PluginBase implements Listener
 
 	public function onEnable() {
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
-		$this->getServer()->getScheduler()->scheduleRepeatingTask(new CallbackTask([$this,"gameTimber"]),20);
+		$this->getServer()->getScheduler()->scheduleRepeatingTask(new CallbackTask([$this,"gameTask"]),20);
 		@mkdir($this->getDataFolder(), 0777, true);
 		
 		# Custom Config Saving
@@ -165,10 +165,11 @@ class Main extends PluginBase implements Listener
 		$this->SetStatus=array();
 		$this->all=0;
 		$this->config->save();
-		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] SurvivalGame Has Been Enable");
-		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] By: AndreTheGamer");
-		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] File: Config Loaded !");
-		$this->getServer()->getLogger()->info(TextFormat::BLUE."[SG] File: Point Loaded !");
+		$this->getServer()->getLogger()->info(TextFormat::YELLOW."------------------------------");
+		$this->getServer()->getLogger()->info(TextFormat::RED."SurvivalGames has been §eenabled");
+		$this->getServer()->getLogger()->info(TextFormat::RED."Config: §eLoaded !");
+		$this->getServer()->getLogger()->info(TextFormat::RED."Developer: §exZeroMCPE §e@xZeroMCPE");
+		$this->getServer()->getLogger()->info(TextFormat::YELLOW."------------------------------");
 		
 	
 	}
@@ -216,12 +217,12 @@ class Main extends PluginBase implements Listener
 		{
 		case "help":
 		    if($sender->hasPermission("sg.command.help") or $sender->hasPermission("sg.command") or $sender->hasPermission("sg")){
-				$sender->sendMessage("§d§o-------SurvivalGame Help-------");		
-				$sender->sendMessage("§d§oUse §e/sg stats");
-				$sender->sendMessage("§d§oUse §e/sg set");
-				$sender->sendMessage("§d§oUse §e/sg remove");
-				$sender->sendMessage("§d§oUse §e/sg start");
-				$sender->sendMessage("§d§oUse §e/sg reload");
+				$sender->sendMessage("§d§o-------SurvivalGames Help-------");		
+				$sender->sendMessage("§d§oUse §e/sg stats - View your stats");
+				$sender->sendMessage("§d§oUse §e/sg set - Set up an arena");
+				$sender->sendMessage("§d§oUse §e/sg remove - Remove a arena");
+				$sender->sendMessage("§d§oUse §e/sg start - Force start a match");
+				$sender->sendMessage("§d§oUse §e/sg reload - Reload the spawn positions");
 				$sender->sendMessage("§d§o--------------------------------");	
 			    return true; }
 				break;
@@ -263,13 +264,13 @@ class Main extends PluginBase implements Listener
 		if($sender instanceof Player){
 			if($this->config->exists("lastpos"))
 			{
-				$sender->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] §cThat arena has already been setup, remove it and try agin");
+				$sender->sendMessage("§cAn arena has already been setup, remove the existing one first");
 			}
 			else
 			{
 				$name=$sender->getName();
 				$this->SetStatus[$name]=0;
-				$sender->sendMessage(TextFormat::DARK_BLUE. "[{$this->getConfig()->get("prefix")}] You must now set the join sign\nTap a sign to set it now");
+				$sender->sendMessage("Tap a sign to set it as join sign!");
 			}
 		}else{
 			$sender->sendMessage(TextFormat::RED . "You may only use ths command in-game!");
@@ -387,7 +388,7 @@ class Main extends PluginBase implements Listener
 			$this->SetStatus=array();
 			$this->all=0;//
 			$this->config->save();
-			$sender->sendMessage(TextFormat::GREEN. "SurvivalGames config has been reloaded");
+			$sender->sendMessage(TextFormat::GREEN. "SurvivalGamess config has been reloaded");
 			break;
 		default:
 			return false;
@@ -497,7 +498,7 @@ class Main extends PluginBase implements Listener
 		$this->getServer()->getLogger()->info($msg);
 		unset($pl,$msg);
 	}
-	public function gameTimber(){
+	public function gameTask(){
 		if(!isset($this->lastpos) || $this->lastpos==array())
 		{
 			return false;
@@ -575,7 +576,7 @@ class Main extends PluginBase implements Listener
 				$arena = $this->getConfig()->get("Arena-Map");
 				Server::getInstance()->broadcastMessage(TextFormat::BLUE. "$Started");
 				foreach($this->players as $key=>$val){
-					if($p->hasPermission("survivalgames.vip")){
+					if($p->hasPermission("SurvivalGames.vip")){
 						$p->getInventory()->addItem(new Item(Item::IRON_HELMET, 0, 1));
 						$p->getInventory()->addItem(new Item(Item::IRON_CHESTPLATE, 0, 1));
 						$p->getInventory()->addItem(new Item(Item::IRON_LEGGINGS, 0, 1));
@@ -625,7 +626,6 @@ class Main extends PluginBase implements Listener
 			}
 			else if(count($this->players)==0)
 			{
-				Server::getInstance()->broadcastMessage(""); // DELETED
 				$this->gameStatus=0;
 				$this->lastTime=0;
 				$this->ClearAllInv();
@@ -759,7 +759,7 @@ class Main extends PluginBase implements Listener
 			case 0:
 				if($event->getBlock()->getID() != 63 && $event->getBlock()->getID() != 68)
 				{
-					$player->sendMessage(TextFormat::GREEN."[SurvivalGame] You must now set the join sign\nTap a sign to set it now");
+					$player->sendMessage(TextFormat::GREEN."Tap a sign to set it as join sign!");
 				}
 				$this->sign=array(
 					"x" =>$block->getX(),
@@ -1129,7 +1129,7 @@ class Main extends PluginBase implements Listener
 						}
 						
 						$this->players[$event->getPlayer()->getName()]=array("id"=>$event->getPlayer()->getName());
-						$event->getPlayer()->sendMessage(TextFormat::BLUE. "[{$this->getConfig()->get("prefix")}] Welcome To SG-1");
+						$event->getPlayer()->sendMessage(TextFormat::BLUE. "[{$this->getConfig()->get("prefix")}] Welcom to the tournament");
 						if($this->gameStatus==0 && count($this->players)>=2)
 						{
 							$this->gameStatus=1;
