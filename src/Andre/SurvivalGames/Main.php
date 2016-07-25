@@ -59,12 +59,17 @@ class Main extends PluginBase implements Listener
 				
 	// ------------------ MULTILANGUAGE SUPPORT ------------------ \\
      $Lang = $this->getConfig()->get('Language');
-        if(!(is_dir($this->getDataFolder()."Message-".$Lang.".yml"))){
-			$this->saveResource("Message-".$Lang.".yml", true);
+	 
+	 // Just to make sure :)
+	 if (!file_exists('/Language/')) {
+    mkdir('/Language', 0777, true);
+}
+        if(!(is_dir($this->getDataFolder()."Language/Message-".$Lang.".yml"))){
+			$this->saveResource("Language/".$Lang.".yml", true);
 		 }else{
 			 $this->getServer()->getLogger()->info("Loading lang file.....");
 		 }//There is a problem in this section,hope you fix them.
-		$ChooseLang = (new Config($this->getDataFolder() . "Message-" . $Lang . ".yml", Config::YAML)); 
+		$ChooseLang = (new Config($this->getDataFolder() . "Language/Message-" . $Lang . ".yml", Config::YAML)); 
 		$Already_Playing  = $ChooseLang->get("Already_Playing"); 
                 $Joined_Arena  = $ChooseLang->get("Joined_Arena"); 
                 $Not_In_Match  = $ChooseLang->get("Not_In_Match"); 
