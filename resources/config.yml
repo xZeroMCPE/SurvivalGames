@@ -8,7 +8,7 @@
 #       \___| \__,_||__|\_| \_/  |____|  \_/  |__|__||_____|    |___,_||__|__||___|___||_____| \___|     #
 #                                                                                                        #
 #      Thank-you for downloading the Survival Games plugin                                               #
-#      GitHub: www.github.com/AndreTheGamer                                                              #
+#      GitHub: www.github.com/xZeroMCPE                                                              #
 #                                                                                                        #
 ##########################################################################################################
 #                                                                                                        #
@@ -23,6 +23,6 @@
 # If you decide not to use Economy you can set it to 'False"
 ####
 ---
-prefix: SurvivalGame
+prefix: SurvivalGames
 Language: eng
 ...
