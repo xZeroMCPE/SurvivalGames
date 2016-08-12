@@ -321,7 +321,7 @@ class Main extends PluginBase implements Listener
 			$sender->sendMessage(TextFormat::GREEN . "Game settings successfully removed.");
 			break;
 		case "start":
-			Server::getInstance()->broadcastMessage(TextFormat::BLUE. "$Force_Start");
+			$this->getServer()->broadcastMessage(TextFormat::BLUE. "$Force_Start");
 			$this->gameStatus=1;
 			$this->lastTime=5;
 			break;
@@ -394,9 +394,9 @@ class Main extends PluginBase implements Listener
 			}
 			$this->gameTime=(int)$this->config->get("gameTime");
 			$this->prefix=(int)$this->config->get("prefix");
-			$this->gameStatus=0;//status of the game (sign)
-			$this->lastTime=0;//just a variable :P
-			$this->players=array();//players
+			$this->gameStatus=0;
+			$this->lastTime=0;
+			$this->players=array();
 			$this->SetStatus=array();
 			$this->all=0;//
 			$this->config->save();
@@ -1127,7 +1127,7 @@ class Main extends PluginBase implements Listener
 				}else{
 				if(!$event->getPlayer()->hasPermission("sg.touch.startgame"))
 				{
-					$event->getPlayer()->sendMessage("You don't have permission to join this game.");
+					$event->getPlayer()->sendMessage("You don't have permission to do that!\nContact the server administration");
 				}else{
 				
 				if($this->gameStatus==0 || $this->gameStatus==1)
@@ -1158,7 +1158,7 @@ class Main extends PluginBase implements Listener
 					}
 					else
 					{
-						$event->getPlayer()->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] Please leave server, to quit match!");
+						$event->getPlayer()->sendMessage(TextFormat::RED. "[{$this->getConfig()->get("prefix")}] You are already in an arena");
 					}
 				}
 				else
