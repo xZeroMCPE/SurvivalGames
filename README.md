@@ -25,6 +25,12 @@ This is not just another SurvivalGame plugin. This plugin aims to bring a fully 
  - Easy arena setup
  - Per Arena Permissions
  - Lightning and thunder on player deaths (Simulate cannons)
- - Multiworld Support
+ - MultiWorld Support
+ - MultiLanguage Suppoer
  - Events API - Economy, Kits + More!
 Plus many, many more features included in this plugin!
+
+Language
+--------
+
+SurvivalGames gives server owners a chance to use any language as possible. If you are wanting to help us you may create any languages file that does not exist and create a "Pull Request" and we"ll sure merge it. We are trying to make SurvivalGames support as much language as posibble. The more the "better". 
