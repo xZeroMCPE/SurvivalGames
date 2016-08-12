@@ -3,7 +3,7 @@
 
 ## If you make any mistakes, just remove the lang file and it will
 ## generate a fresh new copy after reloading/restarting server!
-
+# Varibles: {time} , {player}
 
 # Game events related
 Already_Playing: Ya esta jugando a una partida
