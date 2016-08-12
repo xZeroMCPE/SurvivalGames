@@ -37,7 +37,7 @@ use pocketmine\event\player\PlayerJoinEvent;
 class Main extends PluginBase implements Listener
 {	
 	public $data;
-	
+	public $version = "1.0.10"
 	private static $object = null;
 	
 	public static function getInstance(){
@@ -170,13 +170,20 @@ class Main extends PluginBase implements Listener
 		$this->SetStatus=array();
 		$this->all=0;
 		$this->config->save();
-		$this->getServer()->getLogger()->info(TextFormat::YELLOW."------------------------------");
-		$this->getServer()->getLogger()->info(TextFormat::RED."SurvivalGames has been §eenabled");
-		$this->getServer()->getLogger()->info(TextFormat::RED."Config: §eLoaded !");
-		$this->getServer()->getLogger()->info(TextFormat::RED."Developer: §exZeroMCPE §e@xZeroMCPE");
-		$this->getServer()->getLogger()->info(TextFormat::YELLOW."------------------------------");
-		
-	
+		$version = $this->version;
+		$this->getServer()->getLogger()->info("§b
+ *		
+ *		
+ *  _____                  _            _  _____                           
+  / ____|                (_)          | |/ ____|                          
+ | (___  _   _ _ ____   _____   ____ _| | |  __  __ _ _ __ ___   ___  ___ 
+  \___ \| | | | '__\ \ / / \ \ / / _` | | | |_ |/ _` | '_ ` _ \ / _ \/ __|
+  ____) | |_| | |   \ V /| |\ V / (_| | | |__| | (_| | | | | | |  __/\__ \
+ |_____/ \__,_|_|    \_/ |_| \_/ \__,_|_|\_____|\__,_|_| |_| |_|\___||___/
+ *
+ * §cGitHub:§e GitHub.com/xZeroMCPE/SurvivalGames
+ * §cUsing version: $version
+");	
 	}
 
 	
@@ -261,7 +268,7 @@ class Main extends PluginBase implements Listener
                                 $sender->sendMessage("$No_Permission");
 				return true; }
 		}else{
-			$sender->sendMessage(TextFormat::RED . "§d§oPlease use the command in game!!");
+			$sender->sendMessage(TextFormat::RED . "That command can only be used in-game!");
 			return true;	
 		}
 				break; 
@@ -269,7 +276,7 @@ class Main extends PluginBase implements Listener
 		if($sender instanceof Player){
 			if($this->config->exists("lastpos"))
 			{
-				$sender->sendMessage("§cAn arena has already been setup, remove the existing one first");
+				$sender->sendMessage("TextFormat::BLUE . "Seems like you have already setup an arena");
 			}
 			else
 			{
@@ -385,7 +392,7 @@ class Main extends PluginBase implements Listener
 			{
 				$this->config->set("prefix","Game");
 			}
-			$this->gameTime=(int)$this->config->get("gameTime");//how long a match is
+			$this->gameTime=(int)$this->config->get("gameTime");
 			$this->prefix=(int)$this->config->get("prefix");
 			$this->gameStatus=0;//status of the game (sign)
 			$this->lastTime=0;//just a variable :P
@@ -393,7 +400,7 @@ class Main extends PluginBase implements Listener
 			$this->SetStatus=array();
 			$this->all=0;//
 			$this->config->save();
-			$sender->sendMessage(TextFormat::GREEN. "SurvivalGamess config has been reloaded");
+			$sender->sendMessage(TextFormat::GREEN. "All SurvivalGames configuration has been reloaded");
 			break;
 		default:
 			return false;
@@ -1188,10 +1195,9 @@ class Main extends PluginBase implements Listener
 	}
 	
 	public function onDisable(){
-			$this->getServer()->getLogger()->info(TextFormat::GREEN."[SG] Saving All Data...");
 			$this->saveResource("config.yml");
         	        $this->saveResource("points.yml");;
-			$this->getServer()->getLogger()->info(TextFormat::GREEN."[SG] All files was saved");
+        	        			$this->getServer()->getLogger()->info(TextFormat::GREEN."All configuration has been saved!");
 	}
 }
 ?>
