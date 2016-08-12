@@ -25,4 +25,5 @@
 ---
 prefix: SurvivalGames
 Language: eng
+Require_Economy: true
 ...
