@@ -37,7 +37,7 @@ use pocketmine\event\player\PlayerJoinEvent;
 class Main extends PluginBase implements Listener
 {	
 	public $data;
-	public $version = "1.0.10"
+	public $version = "1.0.10";
 	private static $object = null;
 	
 	public static function getInstance(){
