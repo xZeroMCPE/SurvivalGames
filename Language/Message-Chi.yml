@@ -1,0 +1,25 @@
+##如果你犯任何错误，只是删除郎文件，它会
+重装/重新启动服务器后##生成一个全新的副本！
+＃可变因素：{time}，{player}
+
+＃游​​戏相关的事件
+Already_Playing：你已经打了比赛
+Joined_Arena：你已经加入了一个巡回赛
+Not_In_Match：你是不是在比赛中
+Matched_Running：这场比赛已经运行！
+NO_PERMISSION：你不具有权限来运行这个命令
+Force_Start：本次比赛已被迫开始
+Blocked_Command：该命令被阻止
+
+＃定时器相关
+Starting：在开始 {time}
+Timer：在比赛开始 {time}
+Not_Enough_Players：没有足够的玩家。倒计时已经停止
+
+＃竞技场相关：使用 \n 作为一个新行
+Started：本次比赛开始了
+Chest_Refilled：柜已被重置！
+Deathmatch_starting：死亡竞赛开始于 {time}
+Deatchmatch_started：死斗已经开始。可能最好的一胜
+Match_Ending：在结束 {time}
+Match_Ended：比赛已经结束
