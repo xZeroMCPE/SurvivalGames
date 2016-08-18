@@ -18,7 +18,7 @@ Not_Enough_Players：没有足够的玩家。倒计时已经停止
 
 ＃竞技场相关：使用 \n 作为一个新行
 Started：本次比赛开始了
-Chest_Refilled：柜已被重置！
+Chest_Refilled：箱子已重置
 Deathmatch_starting：死亡竞赛开始于 {time}
 Deatchmatch_started：死斗已经开始。可能最好的一胜
 Match_Ending：在结束 {time}
