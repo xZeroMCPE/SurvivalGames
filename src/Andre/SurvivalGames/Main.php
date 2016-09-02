@@ -276,7 +276,7 @@ class Main extends PluginBase implements Listener
 		if($sender instanceof Player){
 			if($this->config->exists("lastpos"))
 			{
-				$sender->sendMessage("TextFormat::BLUE . "Seems like you have already setup an arena");
+				$sender->sendMessage(TextFormat::BLUE . "Seems like you have already setup an arena");
 			}
 			else
 			{
