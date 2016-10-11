@@ -658,7 +658,7 @@ class Main extends PluginBase implements Listener
 				$this->sendMessage("$Deathmatch_starting §b3 seconds");
 				break;
 			case 4:
-				$this->sendMessage("$Deathmatch_starting §b5 seconds");
+				$this->sendMessage("$Deathmatch_starting §b4 seconds");
 				break;
 			case 5:
 				$this->sendMessage("$Deathmatch_starting §b5 seconds");
