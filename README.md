@@ -14,20 +14,20 @@ Before installing this plugin, a few things are required.
 Features
 --------
 This is not just another SurvivalGame plugin. This plugin aims to bring a fully automated, fully fledged gaming system to your server.
- - Full automation
- - Automatic arena regeneration
- - Chest reset / randomly filled chest
- - Auto game start
- - Spectators
- - In-game Lobby with real-time player and arena stats
- - Multiple arenas
- - Simultaneous games
- - Easy arena setup
- - Per Arena Permissions
- - Lightning and thunder on player deaths (Simulate cannons)
- - MultiWorld Support
- - MultiLanguage Suppoer
- - Events API - Economy, Kits + More!
+ - [X] Full automation
+ - [X] Automatic arena regeneration
+ - [] Chest reset / randomly filled chest
+ - [X] Auto game start
+ - [] Spectators
+ - [X] In-game Lobby with real-time player and arena stats
+ - [X] Multiple arenas
+ - [X]Simultaneous games
+ - [X]Easy arena setup
+ - [X]Per Arena Permissions
+ - [X]Lightning and thunder on player deaths (Simulate cannons)
+ - [X]MultiWorld Support
+ - [X]MultiLanguage Suppoer
+ - [X]Events API - Economy, Kits + More!
 Plus many, many more features included in this plugin!
 
 Language
