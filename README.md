@@ -21,13 +21,13 @@ This is not just another SurvivalGame plugin. This plugin aims to bring a fully 
  - [] Spectators
  - [X] In-game Lobby with real-time player and arena stats
  - [X] Multiple arenas
- - [X]Simultaneous games
- - [X]Easy arena setup
- - [X]Per Arena Permissions
- - [X]Lightning and thunder on player deaths (Simulate cannons)
- - [X]MultiWorld Support
- - [X]MultiLanguage Suppoer
- - [X]Events API - Economy, Kits + More!
+ - [X] Simultaneous games
+ - [X] Easy arena setup
+ - [X] Per Arena Permissions
+ - [X] Lightning and thunder on player deaths (Simulate cannons)
+ - [X] MultiWorld Support
+ - [X] MultiLanguage Suppoer
+ - [X] Events API - Economy, Kits + More!
 Plus many, many more features included in this plugin!
 
 Language
