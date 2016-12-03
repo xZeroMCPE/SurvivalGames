@@ -16,9 +16,9 @@ Features
 This is not just another SurvivalGame plugin. This plugin aims to bring a fully automated, fully fledged gaming system to your server.
  - [X] Full automation
  - [X] Automatic arena regeneration
- - [] Chest reset / randomly filled chest
+ - [ ] Chest reset / randomly filled chest
  - [X] Auto game start
- - [] Spectators
+ - [ ] Spectators
  - [X] In-game Lobby with real-time player and arena stats
  - [X] Multiple arenas
  - [X] Simultaneous games
