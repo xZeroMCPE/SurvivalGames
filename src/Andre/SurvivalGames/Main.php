@@ -15,7 +15,6 @@ use pocketmine\utils\Config;
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\math\Vector3;
 use pocketmine\scheduler\PluginTask;
-use pocketmine\scheduler\CallbackTask;
 use pocketmine\block\Block;
 use pocketmine\event\entity\EntityDeathEvent;
 use pocketmine\event\entity\EntityDamageEvent;
