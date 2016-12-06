@@ -28,7 +28,8 @@ This is not just another SurvivalGame plugin. This plugin aims to bring a fully 
  - [X] MultiWorld Support
  - [X] MultiLanguage Suppoer
  - [X] Events API - Economy, Kits + More!
-Plus many, many more features included in this plugin!
+ - [ ] REMOVE DEPRITIATED AND REMAKE
+ - Plus many, many more features included in this plugin!
 
 Language
 --------
