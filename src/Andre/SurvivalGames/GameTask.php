@@ -225,3 +225,4 @@ class GameTask extends PluginTask{
 		}
 		$this->plugin->changeStatusSign();
 	}
+}
