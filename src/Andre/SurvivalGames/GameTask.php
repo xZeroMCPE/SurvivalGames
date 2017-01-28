@@ -1,7 +1,7 @@
 <?php
 namespace Andre\SurvivalGames;
 
-use pocketmine\plugin\PluginTask;
+use pocketmine\scheduler\PluginTask;
 
 class GameTask extends PluginTask{
 	
