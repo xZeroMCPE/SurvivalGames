@@ -1,9 +1,9 @@
 <?php
 namespace Andre\SurvivalGames;
 
-use pocketmine\scheduler\Task;
+use pocketmine\scheduler\PluginTask;
 
-class GameTask extends Task{
+class GameTask extends PluginTask{
 	
 	public function __construct(Main $pl){
 		$this->plugin = $pl;
