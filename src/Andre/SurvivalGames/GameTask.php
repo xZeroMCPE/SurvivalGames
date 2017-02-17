@@ -6,6 +6,7 @@ use pocketmine\scheduler\PluginTask;
 class GameTask extends PluginTask{
 	
 	public function __construct(Main $pl){
+		parent::__construct($pl);
 		$this->plugin = $pl;
 	}
 	public function onRun($currentTicks){
