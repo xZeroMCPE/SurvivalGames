@@ -112,6 +112,7 @@ class Main extends PluginBase implements Listener
  			$this->pos23=$this->config->get("pos23");
  			$this->pos24=$this->config->get("pos24");			
 			$this->lastpos=$this->config->get("lastpos");
+			$this->getServer()->loadLevel($this->config->get("sign")["level"]);
 			$this->signlevel=$this->getServer()->getLevelByName($this->config->get("sign")["level"]);
 			$this->sign=new Vector3($this->sign["x"],$this->sign["y"],$this->sign["z"]);
 			$this->pos1=new Vector3($this->pos1["x"]+0.5,$this->pos1["y"],$this->pos1["z"]+0.5);
