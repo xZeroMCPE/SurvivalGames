@@ -187,7 +187,7 @@ class Main extends PluginBase implements Listener
 	}
 
 	
-	public function onCommand(CommandSender $sender, Command $command, $label, array $args)
+	public function onCommand(CommandSender $sender, Command $command, $label, array $args) : bool
 	{
 		if($command->getName()=="lobby")
 		{
