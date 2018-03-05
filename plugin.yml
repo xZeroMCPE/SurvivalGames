@@ -1,6 +1,6 @@
 name: SurvivalGames
-api: 2.1.0
-version: 1.0.9
+api: 3.0.0-ALPHA11
+version: 1.2.0
 main: Andre\SurvivalGames\Main
 load: POSTWORLD
 author: AndreTheGamer
