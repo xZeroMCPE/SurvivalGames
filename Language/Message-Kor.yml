@@ -1,0 +1,28 @@
+#Korea Language File
+#This is the default lang file!
+
+## If you make any mistakes, just remove the lang file and it will
+## generate a fresh new copy after reloading/restarting server!
+# Varibles: {time} , {player}
+
+# Game events related
+Already_Playing: 당신은 이미 게임에 참가 하였습니다.
+Joined_Arena: 당신은 토너먼트에 참가 하였습니다!
+Not_In_Match: 당신은 매치에 참가 하지 않았습니다!
+Matched_Running: 이미 매치가 진행중 입니다!
+No_Permission: 당신은 이명령어를 실행할 권한이 없습니다.
+Force_Start: 토너먼트가 시작 되었습니다!
+Blocked_Command: 명령어가 잠금화 되 있습니다.
+
+# Timer related
+Starting: 시작 까지 {time}초
+Timer: 토너먼트 시작까지 {time}초
+Not_Enough_Players: 인원이 부족 합니다!
+
+# Arena related: Use \n for a new line
+Started: 토너먼트가 시작 되었습니다!
+Chest_Refilled: 상자가 리필 되었습니다!
+Deathmatch_starting: 데스매치 까지 {time}초
+Deatchmatch_started: 데스매치가 시작 되었습니다!
+Match_Ending: 종료 까지 {time}초
+Match_Ended: 매치가 종료 되었습니다.
