@@ -1,6 +1,6 @@
 # SurvivalGames
 =================================
-Survival Games is a plugin that has the aim of creating a fully automated hunger games style experience. The plugin was created to be simple to use, and to be easily setup on any type of server, no matter the size or type! Survival Games provides a way for your server to have a full fledged, fully automated hunger games experience for any player. We are working hard to expand this to be the best "ever" exisit SurvivalGame plugin
+Survival Games is a plugin with the aim of creating a fully automated hunger games style experience. The plugin was created to be simple to use and to be easy to setup on any type of server, no matter the size or type. Survival Games provides a way for your server to have a full fledged, fully automated hunger games experience for any player. We are working hard to expand this to be the best "ever" existing SurvivalGame plugin.
 
 
 [![Join the chat at https://gitter.im/AndreTheGamer/SurvivalGame](https://badges.gitter.im/AndreTheGamer/SurvivalGame.svg)](https://gitter.im/AndreTheGamer/SurvivalGame?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -13,7 +13,7 @@ Before installing this plugin, a few things are required.
  
 Features
 --------
-This is not just another SurvivalGame plugin. This plugin aims to bring a fully automated, fully fledged gaming system to your server.
+This is not just another SurvivalGame plugin. This plugin aims to bring a full fledged, fully automated gaming system to your server.
  - [X] Full automation
  - [X] Automatic arena regeneration
  - [ ] Chest reset / randomly filled chest
@@ -34,4 +34,4 @@ This is not just another SurvivalGame plugin. This plugin aims to bring a fully 
 Language
 --------
 
-SurvivalGames gives server owners a chance to use any language as possible. If you are wanting to help us you may create any languages file that does not exist and create a "Pull Request" and we"ll sure merge it. We are trying to make SurvivalGames support as much language as posibble. The more the "better". 
+SurvivalGames gives server owners the freedom  to use any language they wish. If you are willing to contribute to us, you may create a language file for any language that's not available in the repository and create a "Pull Request" and we'll surely merge it. We are trying to make SurvivalGames support as many languages as posibble. The more the "better". 
